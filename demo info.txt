@@ -1,11 +1,4 @@
 
-db table for events
-
-demo columns
-id
-eventname
-description
-
 
 final columns
 events table

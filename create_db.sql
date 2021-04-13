@@ -15,6 +15,9 @@ noodlePrice -- decimal(15,2) 15 is precision(total length of value) 2 is num of 
 noodleMinTickets
 noodleMaxTickets
 noodleTicketsSold
+-- right now the db auto stores empty integer values as 1
+
+
 
 userID -- req
 userName -- req
@@ -24,7 +27,6 @@ userRating -- float 15
 userBio
 userBioLong
 userImage -- string that stores address of image in website
-
 
 
 CREATE TABLE IF NOT EXISTS `events` (
@@ -45,6 +47,7 @@ CREATE TABLE IF NOT EXISTS `events` (
   PRIMARY KEY (`noodleID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
+
 CREATE TABLE IF NOT EXISTS `users` (
   `userID` int(11) NOT NULL AUTO_INCREMENT,
   `userName` varchar(256) NOT NULL,
@@ -63,7 +66,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 
 
-INSERT INTO `events` (`id`, `name`, `description`, organizer) VALUES
+INSERT INTO `events` (`noodleID`, `noodleTitle`, `userID`, `noodleStatus`, `noodleDescription`, `noodleTags`, `noodleImage`,
+ `noodleLocation`, `noodleDate`, `noodleTime`, `noodlePrice`, `noodleMinTickets`, `noodleMaxTickets`, `noodleTicketsSold`) VALUES
 ( 
 'noodleID',
 'noodleTitle',
@@ -82,20 +86,112 @@ INSERT INTO `events` (`id`, `name`, `description`, organizer) VALUES
 );
 
 
-INSERT INTO `events` (`id`, `name`, `description`, organizer) VALUES
+INSERT INTO `events` (`noodleID`, `noodleTitle`, `userID`, `noodleStatus`, `noodleDescription`, `noodleTags`, `noodleImage`,
+ `noodleLocation`, `noodleDate`, `noodleTime`, `noodlePrice`, `noodleMinTickets`, `noodleMaxTickets`, `noodleTicketsSold`) VALUES
 ( 
-'',
+null,
 'Fishing with Friends',
 '1',
 'event',
-'noodleDescription',
-'noodleTags',
-'noodleImage',
-'noodleLocation',
-'noodleDate',
-'noodleTime',
-'noodlePrice',
-'noodleMinTickets',
-'noodleMaxTickets',
-'noodleTicketsSold'
+'Hey, I am Pam! I love fishing but none of my friends do! I have a boat, and all the gear you could possibly need. Fish is on the menu but if we get skunked, I have food available as well.',
+'fishing, food, hobby, friends, sports',
+'images\fishing-crop-dream.PNG',
+'Sydney, Ontario',
+'2021-04-01',
+'8:30AM-5:00PM',
+'17.00',
+'2',
+'3',
+'1'
+),
+
+( 
+null,
+'Thursday Bowling Nights',
+'2',
+'dream',
+'Bowling Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum. Suspendisse pulvinar in ex a posuere.',
+'bowling, hobby, sports',
+'images\bowling-crop.PNG',
+null,
+null,
+null,
+null,
+null,
+null,
+null
+),
+
+( 
+null,
+'Cooking For Kids',
+'1',
+'dream',
+'Cooking Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum. Suspendisse pulvinar in ex a posuere.',
+'cooking, food, hobby, kids',
+'images\cooking-crop.PNG',
+null,
+null,
+null,
+null,
+null,
+null,
+null
+)
+;
+
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO `users` (`userID`, `userName`, `userFirstName`, `userLastName`, `userRating`, `userBio`, `userBioLong`, `userImage`) VALUES
+( 
+'userID',
+'userName',
+'userFirstName',
+'userLastName',
+'userRating',
+'userBio',
+'userBioLong',
+'userImage'
+);
+
+
+
+
+
+
+
+
+
+
+INSERT INTO `users` (`userID`, `userName`, `userFirstName`, `userLastName`, `userRating`, `userBio`, `userBioLong`, `userImage`) VALUES
+(
+null,
+"Pam's Fishing",
+'Pam',
+'Poovey',
+'4',
+'PamLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum.',
+'PamLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum. Suspendisse pulvinar in ex a posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras varius arcu tellus, et eleifend turpis porta id. Aliquam commodo leo leo, eget rhoncus enim dictum nec. Morbi porta elementum ex sollicitudin porttitor.',
+'bowlingimagelink'
+);
+
+INSERT INTO `users` (`userID`, `userName`, `userFirstName`, `userLastName`, `userRating`, `userBio`, `userBioLong`, `userImage`) VALUES
+( 
+null,
+"Krieger's Bowling Team",
+"Krieger's",
+'Bowling Team',
+'3',
+'KriegLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum.',
+'KriegLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum. Suspendisse pulvinar in ex a posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras varius arcu tellus, et eleifend turpis porta id. Aliquam commodo leo leo, eget rhoncus enim dictum nec. Morbi porta elementum ex sollicitudin porttitor.',
+'bowlingimagelink'
 );

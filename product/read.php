@@ -36,20 +36,20 @@ if($num>0){
         // just $name only
         extract($row);
         $product_item=array(
-            "noodleId" => $id,
-            "noodleTitle" => $name,
-            "userID" => 1,
-            "noodleStatus" => "event",
-            "noodleDescription" => html_entity_decode($description),
+            "noodleId" => $noodleId,
+            "noodleTitle" => $noodleTitle,
+            "userID" => $userID,
+            "noodleStatus" => $noodleStatus,
+            "noodleDescription" => html_entity_decode($noodleDescription),
             "noodleTags" => array("fishing", "food", "hobby", "friends", "sports"),
-            "noodleImage" => "fishing",
-            "noodleLocation" => "Sydney, Ontario",
-            "noodleDate" => "2021-04-01",
-            "noodleTime" => "8:30AM-5:00PM",
-            "noodlePrice" => "$17.00",
-            "noodleMinTickets" => 2,
-            "noodleMaxTickets" => 3,
-            "noodleTicketsSold" => 1
+            "noodleImage" => $noodleImage,
+            "noodleLocation" => $noodleLocation,
+            "noodleDate" => $noodleDate,
+            "noodleTime" => $noodleTime,
+            "noodlePrice" => $noodlePrice,
+            "noodleMinTickets" => $noodleMinTickets,
+            "noodleMaxTickets" => $noodleMaxTickets,
+            "noodleTicketsSold" => $noodleTicketsSold
         );
   
         array_push($products_arr["events"], $product_item);
