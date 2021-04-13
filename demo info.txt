@@ -1,0 +1,73 @@
+
+db table for events
+
+demo columns
+id
+eventname
+description
+
+
+final columns
+events table
+
+noodleID 
+noodleTitle
+userID
+noodleStatus
+noodleDescription
+noodleTags
+noodleImage
+noodleLocation
+noodleDate
+noodleTime
+noodlePrice
+noodleMinTickets
+noodleMaxTickets
+noodleTicketsSold
+
+
+users table
+
+userID
+userName
+userFirstName
+userLastName
+userRating
+userBio
+userBioLong
+userImage
+
+http://localhost/noodlewall/product/read.php
+
+http://localhost/noodlewall/product/create.php
+{
+    "name" : "Amazing Pillow 2.0",
+    "price" : "199",
+    "description" : "The best pillow for amazing programmers.",
+    "category_id" : 2,
+    "created" : "2018-06-01 00:35:07"
+}
+
+http://localhost/noodlewall/product/read_one.php?id=60
+http://localhost/noodlewall/product/read_one.php?id=999
+
+http://localhost/noodlewall/product/update.php
+{
+    "id" : "106",
+    "name" : "Amazing Pillow 3.0",
+    "price" : "255",
+    "description" : "The best pillow for amazing programmers.",
+    "category_id" : 2,
+    "created" : "2018-08-01 00:35:07"
+}
+
+http://localhost/noodlewall/product/delete.php
+{
+    "id" : "106"
+}
+
+http://localhost/noodlewall/product/search.php?s=shirt
+
+http://localhost/noodlewall/product/read_paging.php
+
+http://localhost/noodlewall/category/read.php
