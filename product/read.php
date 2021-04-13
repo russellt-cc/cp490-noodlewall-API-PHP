@@ -41,7 +41,7 @@ if($num>0){
             "userID" => $userID,
             "noodleStatus" => $noodleStatus,
             "noodleDescription" => html_entity_decode($noodleDescription),
-            "noodleTags" => array("fishing", "food", "hobby", "friends", "sports"),
+            "noodleTags" => str_getcsv($noodleTags),
             "noodleImage" => $noodleImage,
             "noodleLocation" => $noodleLocation,
             "noodleDate" => $noodleDate,
