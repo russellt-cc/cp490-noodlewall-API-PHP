@@ -36,7 +36,7 @@ if($num>0){
         // just $name only
         extract($row);
         $product_item=array(
-            "noodleId" => $noodleId,
+            "noodleID" => $noodleID,
             "noodleTitle" => $noodleTitle,
             "userID" => $userID,
             "noodleStatus" => $noodleStatus,

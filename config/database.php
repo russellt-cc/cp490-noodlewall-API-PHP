@@ -1,6 +1,6 @@
 <?php
 class Database{
-  
+  //change between these connections when deploying to online hosted version / local version
     /*
     private $host = "localhost";
     private $db_name = "gatkison_noodlewall_db";

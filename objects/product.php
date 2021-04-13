@@ -7,10 +7,22 @@ class Product
     private $table_name = "events";
 
     // object properties
-    public $id;
-    public $name;
-    public $organizer;
-    public $description;
+    public $noodleID;
+    public $noodleTitle;
+    public $userID;
+    public $noodleStatus;
+    public $noodleDescription;
+    public $noodleTags;
+    public $noodleImage;
+    public $noodleLocation;
+    public $noodleDate;
+    public $noodleTime;
+    public $noodlePrice;
+    public $noodleMinTickets;
+    public $noodleMaxTickets;
+    public $noodleTicketsSold;
+
+    
 
     // constructor with $db as database connection
     public function __construct($db)
@@ -23,8 +35,7 @@ class Product
     {
 
         // select all query
-        $query = "SELECT id, name, organizer, description
-            FROM events;";
+        $query = "SELECT * FROM events;";
 
         // prepare query statement
         $stmt = $this->conn->prepare($query);
