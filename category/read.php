@@ -21,7 +21,7 @@ $num = $stmt->rowCount();
 // check if more than 0 record found
 if($num>0){
   
-    // products array
+    // events array
     $categories_arr=array();
     $categories_arr["records"]=array();
   
