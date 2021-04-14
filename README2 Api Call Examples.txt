@@ -1,34 +1,5 @@
 
 
-final columns
-events table
-
-noodleID 
-noodleTitle
-userID
-noodleStatus
-noodleDescription
-noodleTags
-noodleImage
-noodleLocation
-noodleDate
-noodleTime
-noodlePrice
-noodleMinTickets
-noodleMaxTickets
-noodleTicketsSold
-
-
-users table
-
-userID
-userName
-userFirstName
-userLastName
-userRating
-userBio
-userBioLong
-userImage
 
 
 

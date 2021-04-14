@@ -8,14 +8,14 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
   
 // include database and object file
 include_once '../config/database.php';
-include_once '../objects/event.php';
+include_once '../objects/user.php';
   
 // get database connection
 $database = new Database();
 $db = $database->getConnection();
   
 // prepare event object
-$event = new Event($db);
+$event = new User($db);
   
 // get event id
 $json = file_get_contents("php://input");
@@ -23,16 +23,16 @@ $json = file_get_contents("php://input");
 $data = json_decode($json, true);
   
 // set event id to be deleted
-$event->noodleID = $data['noodleID'];
+$event->userID = $data['userID'];
   
 // delete the event
 if($event->delete()){
-
+  
     // set response code - 200 ok
     http_response_code(200);
   
     // tell the user
-    echo json_encode(array("message" => "Event was deleted."));
+    echo json_encode(array("message" => "user was deleted."));
 }
   
 // if unable to delete the event
@@ -42,6 +42,6 @@ else{
     http_response_code(503);
   
     // tell the user
-    echo json_encode(array("message" => "Unable to delete event."));
+    echo json_encode(array("message" => "Unable to delete user."));
 }
 ?>

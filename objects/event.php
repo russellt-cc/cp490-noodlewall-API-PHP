@@ -218,7 +218,7 @@ class Event
         // select all query
         $query = "SELECT * FROM $this->table_name
             WHERE
-                noodleTitle LIKE ? OR noodleDescription LIKE ? OR noodleStatus LIKE ? OR noodleLocation LIKE ? OR noodleTags LIKE ?
+                noodleTitle LIKE ? OR noodleStatus LIKE ? OR noodleLocation LIKE ? OR noodleTags LIKE ?
             ORDER BY
                 noodleID DESC";
 
@@ -234,7 +234,6 @@ class Event
         $stmt->bindParam(2, $keywords);
         $stmt->bindParam(3, $keywords);
         $stmt->bindParam(4, $keywords);
-        $stmt->bindParam(5, $keywords);
 
         // execute query
         $stmt->execute();

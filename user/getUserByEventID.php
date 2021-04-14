@@ -4,30 +4,28 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
   
 // include database and object files
-include_once '../config/core.php';
 include_once '../config/database.php';
-include_once '../objects/event.php';
+include_once '../objects/user.php';
   
 // instantiate database and event object
 $database = new Database();
 $db = $database->getConnection();
   
 // initialize object
-$event = new Event($db);
+$user = new User($db);
   
 // get keywords
 $keywords=isset($_GET["id"]) ? $_GET["id"] : "";
 
 // query events
-$stmt = $event->eventsByUserID($keywords);
+$stmt = $user->userByEventID($keywords);
 $num = $stmt->rowCount();
   
 // check if more than 0 record found
 if($num>0){
     
     // events array
-    $events_arr=array();
-    $events_arr["records"]=array();
+    $user_arr["record"] = array();
 
     // retrieve our table contents
     // fetch() is faster than fetchAll()
@@ -38,32 +36,26 @@ if($num>0){
         // just $name only
         extract($row);
   
-        $event_item=array(
-            "noodleID" => $noodleID,
-            "noodleTitle" => $noodleTitle,
+        $user_item=array(
             "userID" => $userID,
-            "noodleStatus" => $noodleStatus,
-            "noodleDescription" => html_entity_decode($noodleDescription),
-            "noodleTags" => str_getcsv($noodleTags),
-            "noodleImage" => $noodleImage,
-            "noodleLocation" => $noodleLocation,
-            "noodleDate" => $noodleDate,
-            "noodleTime" => $noodleTime,
-            "noodlePrice" => $noodlePrice,
-            "noodleMinTickets" => $noodleMinTickets,
-            "noodleMaxTickets" => $noodleMaxTickets,
-            "noodleTicketsSold" => $noodleTicketsSold,
-            "noodleCutoff" => $noodleCutoff
+            "userName" => $userName,
+            "userFirstName" => $userFirstName,
+            "userLastName" => $userLastName,
+            "userRating" => $userRating,
+            "userBio" => $userBio,
+            "userBioLong" => html_entity_decode($userBioLong),
+            "userImage" => $userImage,
+
         );
-  
-        array_push($events_arr["records"], $event_item);
+
+        array_push($user_arr["record"], $user_item);
     }
   
     // set response code - 200 OK
     http_response_code(200);
   
     // show events data
-    echo json_encode($events_arr);
+    echo json_encode($user_arr);
 }
   
 else{
@@ -72,7 +64,7 @@ else{
   
     // tell the user no events found
     echo json_encode(
-        array("message" => "No events found.")
+        array("message" => "No user found.")
     );
 }
 ?>
