@@ -1,20 +1,24 @@
 <?php
 class Database{
   //change between these connections when deploying to online hosted version / local version
+
+  // specify database credentials
+
+
+    
+    private $host = "localhost";
+    private $db_name = "noodlewall";
+    private $username = "root";
+    private $password = "";
+    public $conn;
+
     /*
     private $host = "localhost";
     private $db_name = "gatkison_noodlewall_db";
     private $username = "gatkison_noodler";
     private $password = "noodlewall123!";
     public $conn;
-    //http://www.gatkinson.site/noodlewall/product/read.php
     */
-    // specify your own database credentials
-    private $host = "localhost";
-    private $db_name = "noodlewall";
-    private $username = "root";
-    private $password = "";
-    public $conn;
   
     // get the database connection
     public function getConnection(){

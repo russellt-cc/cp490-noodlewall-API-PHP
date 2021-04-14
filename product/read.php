@@ -26,7 +26,7 @@ if($num>0){
 
 
 
-    $products_arr["events"]=array();//specifying which object in the array to save new array (of events)
+    $products_arr["records"]=array();//specifying which object in the array to save new array (of events)
     // retrieve our table contents
     // fetch() is faster than fetchAll()
     // http://stackoverflow.com/questions/2770630/pdofetchall-vs-pdofetch-in-a-loop
@@ -49,10 +49,11 @@ if($num>0){
             "noodlePrice" => $noodlePrice,
             "noodleMinTickets" => $noodleMinTickets,
             "noodleMaxTickets" => $noodleMaxTickets,
-            "noodleTicketsSold" => $noodleTicketsSold
+            "noodleTicketsSold" => $noodleTicketsSold,
+            "noodleCutoff" => $noodleCutoff
         );
-  
-        array_push($products_arr["events"], $product_item);
+        
+        array_push($products_arr["records"], $product_item);
     }
 
     //dummy user data for db call

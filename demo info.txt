@@ -38,22 +38,7 @@ http://localhost/noodlewall/product/read.php
 
 http://www.gatkinson.site/noodlewall/product/create.php
 http://localhost/noodlewall/product/create.php
-{
-    "noodleID" : null,
-    "noodleTitle" : "event title",
-    "userID" : 1,
-    "noodleStatus" : "event",
-    "noodleDescription" : "super great event description",
-    "noodleTags" : "demo, event",
-    "noodleImage" : "",
-    "noodleLocation" : "",
-    "noodleDate" : "",
-    "noodleTime" : "",
-    "noodlePrice" : "",
-    "noodleMinTickets" : "",
-    "noodleMaxTickets" : "",
-    "noodleTicketsSold" : ""
-}
+
 {
     "noodleID" : null,
     "noodleTitle" : "event title",
@@ -68,9 +53,9 @@ http://localhost/noodlewall/product/create.php
     "noodlePrice" : null,
     "noodleMinTickets" : null,
     "noodleMaxTickets" : null,
+    "noodleTicketsSold" : null,
     "noodleTicketsSold" : null
 }
-
 
 
 http://localhost/noodlewall/product/read_one.php?id=60

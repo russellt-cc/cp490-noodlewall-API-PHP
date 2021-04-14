@@ -39,12 +39,21 @@ if($num>0){
         extract($row);
   
         $product_item=array(
-            "id" => $id,
-            "name" => $name,
-            "description" => html_entity_decode($description),
-            "price" => $price,
-            "category_id" => $category_id,
-            "category_name" => $category_name
+            "noodleID" => $noodleID,
+            "noodleTitle" => $noodleTitle,
+            "userID" => $userID,
+            "noodleStatus" => $noodleStatus,
+            "noodleDescription" => html_entity_decode($noodleDescription),
+            "noodleTags" => str_getcsv($noodleTags),
+            "noodleImage" => $noodleImage,
+            "noodleLocation" => $noodleLocation,
+            "noodleDate" => $noodleDate,
+            "noodleTime" => $noodleTime,
+            "noodlePrice" => $noodlePrice,
+            "noodleMinTickets" => $noodleMinTickets,
+            "noodleMaxTickets" => $noodleMaxTickets,
+            "noodleTicketsSold" => $noodleTicketsSold,
+            "noodleCutoff" => $noodleCutoff
         );
   
         array_push($products_arr["records"], $product_item);
