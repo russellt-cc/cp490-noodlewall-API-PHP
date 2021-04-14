@@ -116,43 +116,6 @@ class Event
         return false;
     }
 
-    // used when filling up the update event form
-    function readOne()
-    {
-
-        // query to read single record
-        $query = "SELECT
-                c.name as category_name, p.id, p.name, p.description, p.price, p.category_id, p.created
-            FROM
-                " . $this->table_name . " p
-                LEFT JOIN
-                    categories c
-                        ON p.category_id = c.id
-            WHERE
-                p.id = ?
-            LIMIT
-                0,1";
-
-        // prepare query statement
-        $stmt = $this->conn->prepare($query);
-
-        // bind id of event to be updated
-        $stmt->bindParam(1, $this->id);
-
-        // execute query
-        $stmt->execute();
-
-        // get retrieved row
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        // set values to object properties
-        $this->name = $row['name'];
-        $this->price = $row['price'];
-        $this->description = $row['description'];
-        $this->category_id = $row['category_id'];
-        $this->category_name = $row['category_name'];
-    }
-
     // update the event
     function update()
     {
@@ -305,45 +268,4 @@ class Event
         return $stmt;
     }
 
-
-    // read events with pagination
-    public function readPaging($from_record_num, $records_per_page)
-    {
-
-        // select query
-        $query = "SELECT
-                c.name as category_name, p.id, p.name, p.description, p.price, p.category_id, p.created
-            FROM
-                " . $this->table_name . " p
-                LEFT JOIN
-                    categories c
-                        ON p.category_id = c.id
-            ORDER BY p.created DESC
-            LIMIT ?, ?";
-
-        // prepare query statement
-        $stmt = $this->conn->prepare($query);
-
-        // bind variable values
-        $stmt->bindParam(1, $from_record_num, PDO::PARAM_INT);
-        $stmt->bindParam(2, $records_per_page, PDO::PARAM_INT);
-
-        // execute query
-        $stmt->execute();
-
-        // return values from database
-        return $stmt;
-    }
-
-    // used for paging events
-    public function count()
-    {
-        $query = "SELECT COUNT(*) as total_rows FROM " . $this->table_name . "";
-
-        $stmt = $this->conn->prepare($query);
-        $stmt->execute();
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        return $row['total_rows'];
-    }
 }
