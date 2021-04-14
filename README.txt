@@ -39,16 +39,16 @@ read
     returns array of json objects each containing all information about individual users
 
 update
-    allows you to edit an event, by providing a json event object containing all information about an event, including the id of the event to update
+    allows you to edit a user, by providing a json event object containing all information about a user, including the id of the user to update
 
 delete
-    allows you to delete an event, by providing an event's id
+    allows you to delete a user, by providing a user's id
 
 search
-    allows you to search all events by providing a string, searches event fields noodleTitle, noodleStatus, noodleLocation, and noodleTags
+    allows you to search all users by providing a string, searches user fields username, firstname, and lastname
 
-getEventsByUserID
-    returns all events belonging to an individual user, by providing user id
+getUserByEventID
+    return a user that the provided eventid belongs to
 
 
 

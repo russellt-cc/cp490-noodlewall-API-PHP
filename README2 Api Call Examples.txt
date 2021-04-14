@@ -1,15 +1,11 @@
 
 
 
+        interacting with events
 
-
-http://www.gatkinson.site/noodlewall/event/read.php
-http://localhost/noodlewall/event/read.php
-
-
-http://www.gatkinson.site/noodlewall/event/create.php
-http://localhost/noodlewall/event/create.php
-
+create
+    http://www.gatkinson.site/noodlewall/event/create.php
+    http://localhost/noodlewall/event/create.php
 {
     "noodleID" : null,
     "noodleTitle" : "event title",
@@ -25,31 +21,106 @@ http://localhost/noodlewall/event/create.php
     "noodleMinTickets" : null,
     "noodleMaxTickets" : null,
     "noodleTicketsSold" : null,
-    "noodleTicketsSold" : null
+    "noodleTicketsSold" : null,
+    "noodleCutoff" : null
 }
+ 
+read -- has dummy users included
+    http://www.gatkinson.site/noodlewall/event/read.php
+    http://localhost/noodlewall/event/read.php
 
-
-http://localhost/noodlewall/event/read_one.php?id=60
-http://localhost/noodlewall/event/read_one.php?id=999
-
-http://localhost/noodlewall/event/update.php
+update
+    http://www.gatkinson.site/noodlewall/event/update.php
+    http://localhost/noodlewall/event/update.php
 {
-    "id" : "106",
-    "name" : "Amazing Pillow 3.0",
-    "price" : "255",
-    "description" : "The best pillow for amazing programmers.",
-    "category_id" : 2,
-    "created" : "2018-08-01 00:35:07"
+    "noodleID" : 3,
+    "noodleTitle" : "new event title",
+    "userID" : 1,
+    "noodleStatus" : "event",
+    "noodleDescription" : "super great event description",
+    "noodleTags" : "demo, event",
+    "noodleImage" : null,
+    "noodleLocation" : null,
+    "noodleDate" : null,
+    "noodleTime" : null,
+    "noodlePrice" : null,
+    "noodleMinTickets" : null,
+    "noodleMaxTickets" : null,
+    "noodleTicketsSold" : null,
+    "noodleTicketsSold" : null,
+    "noodleCutoff" : null
 }
 
-http://localhost/noodlewall/event/delete.php
+delete
+    http://www.gatkinson.site/noodlewall/event/delete.php
+    http://localhost/noodlewall/event/delete.php
 {
-    "id" : "106"
+    "noodleID" : 3
+}
+ 
+search
+http://www.gatkinson.site/noodlewall/event/search.php?s=fishing
+http://localhost/noodlewall/event/search.php?s=fishing
+ 
+getEventsByUserID
+http://www.gatkinson.site/noodlewall/event/getEventsByUserID.php?id=2
+http://localhost/noodlewall/event/getEventsByUserID.php?id=2
+
+
+
+
+        interacting with users
+
+create
+    http://www.gatkinson.site/noodlewall/user/create.php
+    http://localhost/noodlewall/user/create.php
+{
+    "userID" : null,
+    "userName" : "username1",
+    "userFirstName" : "john",
+    "userLastName" : "appleseed",
+    "userRating" : null,
+    "userBio" : null,
+    "userBioLong" : null,
+    "userImage" : null
+}
+ 
+read -- has dummy users included
+    http://www.gatkinson.site/noodlewall/user/read.php
+    http://localhost/noodlewall/user/read.php
+
+update
+    http://www.gatkinson.site/noodlewall/user/update.php
+    http://localhost/noodlewall/user/update.php
+{
+    "userID" : null,
+    "userName" : "username1",
+    "userFirstName" : "john",
+    "userLastName" : "appleseed",
+    "userRating" : null,
+    "userBio" : null,
+    "userBioLong" : null,
+    "userImage" : null
 }
 
-http://localhost/noodlewall/event/search.php?s=shirt
-http://localhost/noodlewall/event/eventsByUserID.php?s=2
+delete
+    http://www.gatkinson.site/noodlewall/user/delete.php
+    http://localhost/noodlewall/user/delete.php
+{
+    "noodleID" : 3
+}
+ 
+search
+http://www.gatkinson.site/noodlewall/user/search.php?s=fishing
+http://localhost/noodlewall/user/search.php?s=fishing
 
-http://localhost/noodlewall/event/read_paging.php
+getUserByEventID
+http://www.gatkinson.site/noodlewall/user/getUserByEventID.php?id=2
+http://localhost/noodlewall/user/getUserByEventID.php?id=2
 
-http://localhost/noodlewall/category/read.php
+
+
+
+
+
+
