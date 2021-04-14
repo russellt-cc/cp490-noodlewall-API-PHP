@@ -15,6 +15,7 @@ noodlePrice -- decimal(15,2) 15 is precision(total length of value) 2 is num of 
 noodleMinTickets
 noodleMaxTickets
 noodleTicketsSold
+noodleCutoff
 -- right now the db auto stores empty integer values as 1
 
 
@@ -44,6 +45,7 @@ CREATE TABLE IF NOT EXISTS `events` (
   `noodleMinTickets` int(11),
   `noodleMaxTickets` int(11),
   `noodleTicketsSold` int(11),
+  `noodleCutoff` varchar(256)
   PRIMARY KEY (`noodleID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
@@ -82,8 +84,15 @@ INSERT INTO `events` (`noodleID`, `noodleTitle`, `userID`, `noodleStatus`, `nood
 'noodlePrice',
 'noodleMinTickets',
 'noodleMaxTickets',
-'noodleTicketsSold'
+'noodleTicketsSold',
+'noodleCutoff'
 );
+
+
+
+
+
+
 
 
 INSERT INTO `events` (`noodleID`, `noodleTitle`, `userID`, `noodleStatus`, `noodleDescription`, `noodleTags`, `noodleImage`,
@@ -95,14 +104,15 @@ null,
 'event',
 'Hey, I am Pam! I love fishing but none of my friends do! I have a boat, and all the gear you could possibly need. Fish is on the menu but if we get skunked, I have food available as well.',
 'fishing, food, hobby, friends, sports',
-'images\fishing-crop-dream.PNG',
+'http://gatkinson.site/noodlewall/images/fishing-crop.PNG',
 'Sydney, Ontario',
-'2021-04-01',
+'2021-05-30',
 '8:30AM-5:00PM',
 '17.00',
 '2',
 '3',
-'1'
+'1',
+'2021-04-30'
 ),
 
 ( 
@@ -112,7 +122,8 @@ null,
 'dream',
 'Bowling Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum. Suspendisse pulvinar in ex a posuere.',
 'bowling, hobby, sports',
-'images\bowling-crop.PNG',
+'http://gatkinson.site/noodlewall/images/bowling-crop.PNG',
+null,
 null,
 null,
 null,
@@ -129,7 +140,8 @@ null,
 'dream',
 'Cooking Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum. Suspendisse pulvinar in ex a posuere.',
 'cooking, food, hobby, kids',
-'images\cooking-crop.PNG',
+'http://gatkinson.site/noodlewall/images/cooking-crop.PNG',
+null,
 null,
 null,
 null,

@@ -21,8 +21,9 @@ class Product
     public $noodleMinTickets;
     public $noodleMaxTickets;
     public $noodleTicketsSold;
+    public $noodleCutoff;
 
-    
+
 
     // constructor with $db as database connection
     public function __construct($db)
@@ -54,22 +55,58 @@ class Product
         $query = "INSERT INTO
                 " . $this->table_name . "
             SET
-                name=:name, organizer=:organizer, description=:description";
-
+            noodleID=:noodleID, 
+            noodleTitle=:noodleTitle,
+            userID=:userID,
+            noodleStatus=:noodleStatus,
+            noodleDescription=:noodleDescription,
+            noodleTags=:noodleTags,
+            noodleImage=:noodleImage,
+            noodleLocation=:noodleLocation,
+            noodleDate=:noodleDate,
+            noodleTime=:noodleTime,
+            noodlePrice=:noodlePrice,
+            noodleMinTickets=:noodleMinTickets,
+            noodleMaxTickets=:noodleMaxTickets,
+            noodleTicketsSold=:noodleTicketsSold,
+            noodleCutoff=:noodleCutoff;";
         // prepare query
         $stmt = $this->conn->prepare($query);
 
         // sanitize
-        $this->name = htmlspecialchars(strip_tags($this->name));
-        $this->price = htmlspecialchars(strip_tags($this->price));
-        $this->description = htmlspecialchars(strip_tags($this->description));
+        $this->noodleID = htmlspecialchars(strip_tags($this->noodleID));
+        $this->noodleTitle = htmlspecialchars(strip_tags($this->noodleTitle));
+        $this->userID = htmlspecialchars(strip_tags($this->userID));
+        $this->noodleStatus = htmlspecialchars(strip_tags($this->noodleStatus));
+        $this->noodleDescription = htmlspecialchars(strip_tags($this->noodleDescription));
+        $this->noodleTags = htmlspecialchars(strip_tags($this->noodleTags));
+        $this->noodleImage = htmlspecialchars(strip_tags($this->noodleImage));
+        $this->noodleLocation = htmlspecialchars(strip_tags($this->noodleLocation));
+        $this->noodleDate = htmlspecialchars(strip_tags($this->noodleDate));
+        $this->noodleTime = htmlspecialchars(strip_tags($this->noodleTime));
+        $this->noodlePrice = htmlspecialchars(strip_tags($this->noodlePrice));
+        $this->noodleMinTickets = htmlspecialchars(strip_tags($this->noodleMinTickets));
+        $this->noodleMaxTickets = htmlspecialchars(strip_tags($this->noodleMaxTickets));
+        $this->noodleTicketsSold = htmlspecialchars(strip_tags($this->noodleTicketsSold));
+        $this->noodleCutoff = htmlspecialchars(strip_tags($this->noodleCutoff));
 
         // bind values
-        $stmt->bindParam(":name", $this->name);
-        $stmt->bindParam(":price", $this->price);
-        $stmt->bindParam(":description", $this->description);
-        $stmt->bindParam(":category_id", $this->category_id);
-        $stmt->bindParam(":created", $this->created);
+        $stmt->bindParam(":noodleID", $this->noodleID);
+        $stmt->bindParam(":noodleTitle", $this->noodleTitle);
+        $stmt->bindParam(":userID", $this->userID);
+        $stmt->bindParam(":noodleStatus", $this->noodleStatus);
+        $stmt->bindParam(":noodleDescription", $this->noodleDescription);
+        $stmt->bindParam(":noodleTags", $this->noodleTags);
+        $stmt->bindParam(":noodleImage", $this->noodleImage);
+        $stmt->bindParam(":noodleLocation", $this->noodleLocation);
+        $stmt->bindParam(":noodleDate", $this->noodleDate);
+        $stmt->bindParam(":noodleTime", $this->noodleTime);
+        $stmt->bindParam(":noodlePrice", $this->noodlePrice);
+        $stmt->bindParam(":noodleMinTickets", $this->noodleMinTickets);
+        $stmt->bindParam(":noodleMaxTickets", $this->noodleMaxTickets);
+        $stmt->bindParam(":noodleTicketsSold", $this->noodleTicketsSold);
+        $stmt->bindParam(":noodleCutoff", $this->noodleCutoff);
+
 
         // execute query
         if ($stmt->execute()) {
@@ -161,16 +198,16 @@ class Product
     {
 
         // delete query
-        $query = "DELETE FROM " . $this->table_name . " WHERE id = ?";
+        $query = "DELETE FROM " . $this->table_name . " WHERE noodleID = ?";
 
         // prepare query
         $stmt = $this->conn->prepare($query);
 
         // sanitize
-        $this->id = htmlspecialchars(strip_tags($this->id));
+        $this->noodleID = htmlspecialchars(strip_tags($this->noodleID));
 
         // bind id of record to delete
-        $stmt->bindParam(1, $this->id);
+        $stmt->bindParam(1, $this->noodleID);
 
         // execute query
         if ($stmt->execute()) {
