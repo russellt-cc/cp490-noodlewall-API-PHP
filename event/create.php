@@ -37,7 +37,7 @@ if(
     $event->userID = $data['userID'];
     $event->noodleStatus = $data['noodleStatus'];
     $event->noodleDescription = $data['noodleDescription'];
-    $event->noodleTags = $data['noodleTags'];
+    $event->noodleTags =  implode(",", $data['noodleTags']);
     $event->noodleImage = $data['noodleImage'];
     $event->noodleLocation = $data['noodleLocation'];
     $event->noodleDate = $data['noodleDate'];
@@ -48,6 +48,7 @@ if(
     $event->noodleTicketsSold = $data['noodleTicketsSold'];
     $event->noodleCutoff = $data['noodleCutoff'];
 
+    echo ($event->noodleTags);
     // $event->created = date('Y-m-d H:i:s');
 
     // create the event

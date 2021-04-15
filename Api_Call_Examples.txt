@@ -12,7 +12,7 @@ create
     "userID" : 1,
     "noodleStatus" : "event",
     "noodleDescription" : "super great event description",
-    "noodleTags" : "demo, event",
+    "noodleTags" : ["fishing", "food", "hobby", "friends", "sports"],
     "noodleImage" : null,
     "noodleLocation" : null,
     "noodleDate" : null,
@@ -20,7 +20,6 @@ create
     "noodlePrice" : null,
     "noodleMinTickets" : null,
     "noodleMaxTickets" : null,
-    "noodleTicketsSold" : null,
     "noodleTicketsSold" : null,
     "noodleCutoff" : null
 }
@@ -38,7 +37,7 @@ update
     "userID" : 1,
     "noodleStatus" : "event",
     "noodleDescription" : "super great event description",
-    "noodleTags" : "demo, event",
+    "noodleTags" : ["fishing", "food", "hobby", "friends", "sports"],
     "noodleImage" : null,
     "noodleLocation" : null,
     "noodleDate" : null,
@@ -46,7 +45,6 @@ update
     "noodlePrice" : null,
     "noodleMinTickets" : null,
     "noodleMaxTickets" : null,
-    "noodleTicketsSold" : null,
     "noodleTicketsSold" : null,
     "noodleCutoff" : null
 }
