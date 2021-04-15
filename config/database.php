@@ -7,7 +7,7 @@ class Database{
 
     
     private $host = "localhost";
-    private $db_name = "noodlewall";
+    private $db_name = "noodlewall_db";
     private $username = "root";
     private $password = "";
     public $conn;

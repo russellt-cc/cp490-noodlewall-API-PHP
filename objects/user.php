@@ -103,7 +103,9 @@ class User
             userRating= :userRating,
             userBio= :userBio,
             userBioLong= :userBioLong,
-            userImage= :userImage;";
+            userImage= :userImage
+            WHERE
+            userID = :userID;";
 
         // prepare query statement
         $stmt = $this->conn->prepare($query);

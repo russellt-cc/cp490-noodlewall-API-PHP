@@ -1,14 +1,15 @@
 This doc defines the api calls and their uses, with an example of each
 
 
+    FILES
+db_scripts folder contains folders with sql queries that when used on db will create db,tables (create_db.sql), and populate it with example event and user data (populate_db_events.sql) and (populate_db_users.sql)
 
-api filestructure,
-calls,
-example calls
+Api_Call_Example.txt contains template api GET & POST calls
 
 
 
-        interacting with events
+
+        EVENTS CALLS
 
 create
     allows you to create an event, by providing a json event object containing non null information in the required properties (noodleTitle, userID, noodleStatus, noodleDescription, noodleTags)
@@ -30,7 +31,7 @@ getEventsByUserID
 
 
 
-        interacting with users
+        USERS CALLS
 
 create
     allows you to create a user, by providing a json event object containing non null information in the required properties (username, userfirstname, userlastname)

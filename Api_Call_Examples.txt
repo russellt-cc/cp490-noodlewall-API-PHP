@@ -59,12 +59,17 @@ delete
 }
  
 search
-http://www.gatkinson.site/noodlewall/event/search.php?s=fishing
-http://localhost/noodlewall/event/search.php?s=fishing
+    http://www.gatkinson.site/noodlewall/event/search.php?s=fishing
+    http://localhost/noodlewall/event/search.php?s=fishing
  
 getEventsByUserID
-http://www.gatkinson.site/noodlewall/event/getEventsByUserID.php?id=2
-http://localhost/noodlewall/event/getEventsByUserID.php?id=2
+    http://www.gatkinson.site/noodlewall/event/getEventsByUserID.php?id=2
+    http://localhost/noodlewall/event/getEventsByUserID.php?id=2
+
+
+
+
+
 
 
 
@@ -93,8 +98,8 @@ update
     http://www.gatkinson.site/noodlewall/user/update.php
     http://localhost/noodlewall/user/update.php
 {
-    "userID" : null,
-    "userName" : "username1",
+    "userID" : 21,
+    "userName" : "new username1",
     "userFirstName" : "john",
     "userLastName" : "appleseed",
     "userRating" : null,
@@ -111,12 +116,12 @@ delete
 }
  
 search
-http://www.gatkinson.site/noodlewall/user/search.php?s=fishing
-http://localhost/noodlewall/user/search.php?s=fishing
+    http://www.gatkinson.site/noodlewall/user/search.php?s=fishing
+    http://localhost/noodlewall/user/search.php?s=fishing
 
 getUserByEventID
-http://www.gatkinson.site/noodlewall/user/getUserByEventID.php?id=2
-http://localhost/noodlewall/user/getUserByEventID.php?id=2
+    http://www.gatkinson.site/noodlewall/user/getUserByEventID.php?id=2
+    http://localhost/noodlewall/user/getUserByEventID.php?id=2
 
 
 
