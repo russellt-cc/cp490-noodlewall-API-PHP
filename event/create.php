@@ -48,7 +48,6 @@ if(
     $event->noodleTicketsSold = $data['noodleTicketsSold'];
     $event->noodleCutoff = $data['noodleCutoff'];
 
-    echo ($event->noodleTags);
     // $event->created = date('Y-m-d H:i:s');
 
     // create the event

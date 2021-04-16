@@ -9,7 +9,7 @@ null,
 '4',
 'PamLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum.',
 'PamLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum. Suspendisse pulvinar in ex a posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras varius arcu tellus, et eleifend turpis porta id. Aliquam commodo leo leo, eget rhoncus enim dictum nec. Morbi porta elementum ex sollicitudin porttitor.',
-'http://gatkinson.site/noodlewall/images/userIcons/pam-icon.PNG'
+'http://gatkinson.site/noodlewall/images/userIcons/pam-icon.png'
 ),
 
 ( 
@@ -20,7 +20,7 @@ null,
 '3',
 'KriegLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum.',
 'KriegLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum. Suspendisse pulvinar in ex a posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras varius arcu tellus, et eleifend turpis porta id. Aliquam commodo leo leo, eget rhoncus enim dictum nec. Morbi porta elementum ex sollicitudin porttitor.',
-'http://gatkinson.site/noodlewall/images/userIcons/bowling-icon.PNG'
+'http://gatkinson.site/noodlewall/images/userIcons/bowling-icon.png'
 ),
 
 (
@@ -31,7 +31,7 @@ null,
 '3',
 'RichLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum.',
 'RichLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum. Suspendisse pulvinar in ex a posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras varius arcu tellus, et eleifend turpis porta id. Aliquam commodo leo leo, eget rhoncus enim dictum nec. Morbi porta elementum ex sollicitudin porttitor.',
-'http://gatkinson.site/noodlewall/images/userIcons/richard-icon.PNG'
+'http://gatkinson.site/noodlewall/images/userIcons/richard-icon.png'
 ),
 
 (
@@ -42,7 +42,7 @@ null,
 '2',
 'HowieLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum.',
 'HowieLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum. Suspendisse pulvinar in ex a posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras varius arcu tellus, et eleifend turpis porta id. Aliquam commodo leo leo, eget rhoncus enim dictum nec. Morbi porta elementum ex sollicitudin porttitor.',
-'http://gatkinson.site/noodlewall/images/userIcons/howie-icon.PNG'
+'http://gatkinson.site/noodlewall/images/userIcons/howie-icon.png'
 ),
 
 (
@@ -53,7 +53,7 @@ null,
 '5',
 'NouelLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum.',
 'NouelLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum. Suspendisse pulvinar in ex a posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras varius arcu tellus, et eleifend turpis porta id. Aliquam commodo leo leo, eget rhoncus enim dictum nec. Morbi porta elementum ex sollicitudin porttitor.',
-'http://gatkinson.site/noodlewall/images/userIcons/nouel-icon.PNG'
+'http://gatkinson.site/noodlewall/images/userIcons/nouel-icon.png'
 ),
 
 (
@@ -64,7 +64,7 @@ null,
 '4',
 'Carolorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum.',
 'Carolorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum. Suspendisse pulvinar in ex a posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras varius arcu tellus, et eleifend turpis porta id. Aliquam commodo leo leo, eget rhoncus enim dictum nec. Morbi porta elementum ex sollicitudin porttitor.',
-'http://gatkinson.site/noodlewall/images/userIcons/carol-icon.PNG'
+'http://gatkinson.site/noodlewall/images/userIcons/carol-icon.png'
 ),
 
 (
@@ -75,7 +75,7 @@ null,
 '1',
 'JeanetteLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum.',
 'JeanetteLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum. Suspendisse pulvinar in ex a posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras varius arcu tellus, et eleifend turpis porta id. Aliquam commodo leo leo, eget rhoncus enim dictum nec. Morbi porta elementum ex sollicitudin porttitor.',
-'http://gatkinson.site/noodlewall/images/userIcons/jeanette-icon.PNG'
+'http://gatkinson.site/noodlewall/images/userIcons/jeanette-icon.png'
 ),
 
 (
@@ -86,5 +86,5 @@ null,
 '5',
 'BobLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum.',
 'BobLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id sodales ex. Quisque vitae ultricies ipsum. Suspendisse pulvinar in ex a posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras varius arcu tellus, et eleifend turpis porta id. Aliquam commodo leo leo, eget rhoncus enim dictum nec. Morbi porta elementum ex sollicitudin porttitor.',
-'http://gatkinson.site/noodlewall/images/userIcons/bob-icon.PNG'
+'http://gatkinson.site/noodlewall/images/userIcons/bob-icon.png'
 );
