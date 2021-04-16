@@ -119,6 +119,7 @@ class Event
 
             // execute query
             if ($stmt1->execute()) {
+                //returning the last row's event data
                 return $stmt1;
             }
         }
@@ -276,4 +277,27 @@ class Event
 
         return $stmt;
     }
+
+        // get event by eventid
+        function eventByEventID($keywords)
+        {
+    
+            // select all query
+            $query = "SELECT * FROM events
+                WHERE events.noodleID = ?;";
+    
+            // prepare query statement
+            $stmt = $this->conn->prepare($query);
+    
+            // sanitize
+            $keywords = htmlspecialchars(strip_tags($keywords));
+    
+            // bind
+            $stmt->bindParam(1, $keywords);
+    
+            // execute query
+            $stmt->execute();
+    
+            return $stmt;
+        }
 }

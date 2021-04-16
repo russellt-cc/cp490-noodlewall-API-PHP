@@ -227,15 +227,27 @@ class User
     }
 
 
-    // used for paging events
-    public function count()
+    // get user by userid
+    function userByUserID($keywords)
     {
-        $query = "SELECT COUNT(*) as total_rows FROM " . $this->table_name . "";
 
+        // select all query
+        $query = "SELECT * FROM users
+            WHERE users.userID = ?;";
+
+        // prepare query statement
         $stmt = $this->conn->prepare($query);
-        $stmt->execute();
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        return $row['total_rows'];
+        // sanitize
+        $keywords = htmlspecialchars(strip_tags($keywords));
+
+        // bind
+        $stmt->bindParam(1, $keywords);
+
+        // execute query
+        $stmt->execute();
+
+        return $stmt;
     }
+
 }
