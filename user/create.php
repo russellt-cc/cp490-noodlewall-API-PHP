@@ -42,13 +42,13 @@ if(
     // $event->created = date('Y-m-d H:i:s');
 
     // create the event
-    if($user->create()){
+    if($stmt = $user->create()){
   
         // set response code - 201 created
         http_response_code(201);
   
-        // tell the user
-        echo json_encode(array("message" => "User was created."));
+        // return the newly created user
+        echo json_encode($stmt->fetch(PDO::FETCH_ASSOC));
     }
   
     // if unable to create the event, tell the user

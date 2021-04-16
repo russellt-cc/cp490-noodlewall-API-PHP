@@ -81,7 +81,18 @@ class User
 
         // execute query
         if ($stmt->execute()) {
-            return true;
+
+            // selecting the last created row to return
+            $query1 = "SELECT * FROM users ORDER BY userID DESC LIMIT 0, 1";
+
+            // prepare query statement
+            $stmt1 = $this->conn->prepare($query1);
+
+            // execute query
+            if ($stmt1->execute()) {
+                //returning the last row's user data
+                return $stmt1;
+            }
         }
 
         return false;

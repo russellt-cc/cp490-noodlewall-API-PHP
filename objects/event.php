@@ -110,7 +110,17 @@ class Event
 
         // execute query
         if ($stmt->execute()) {
-            return true;
+
+            // selecting the last created row to return
+            $query1 = "SELECT * FROM events ORDER BY noodleID DESC LIMIT 0, 1";
+
+            // prepare query statement
+            $stmt1 = $this->conn->prepare($query1);
+
+            // execute query
+            if ($stmt1->execute()) {
+                return $stmt1;
+            }
         }
 
         return false;
@@ -266,5 +276,4 @@ class Event
 
         return $stmt;
     }
-
 }

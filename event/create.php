@@ -30,7 +30,7 @@ if(
     !empty($data['noodleDescription']) &&
     !empty($data['noodleTags'])
 ){
-  
+
     // set event property values
     $event->noodleID = $data['noodleID'];
     $event->noodleTitle = $data['noodleTitle'];
@@ -48,18 +48,20 @@ if(
     $event->noodleTicketsSold = $data['noodleTicketsSold'];
     $event->noodleCutoff = $data['noodleCutoff'];
 
-    // $event->created = date('Y-m-d H:i:s');
+
 
     // create the event
-    if($event->create()){
-  
+    if($stmt = $event->create()){
+
+
         // set response code - 201 created
         http_response_code(201);
-  
-        // tell the user
-        echo json_encode(array("message" => "Event was created."));
+        
+        // return the newly created event
+        echo json_encode($stmt->fetch(PDO::FETCH_ASSOC));
+       // echo json_encode(array("message" => "Event was created."));
     }
-  
+
     // if unable to create the event, tell the user
     else{
   

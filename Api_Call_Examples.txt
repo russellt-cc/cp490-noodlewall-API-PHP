@@ -23,7 +23,7 @@ create
     "noodleTicketsSold" : null,
     "noodleCutoff" : null
 }
- 
+
 read -- has dummy users included
     http://www.gatkinson.site/noodlewall/event/read.php
     http://localhost/noodlewall/event/read.php
@@ -55,7 +55,7 @@ delete
 {
     "noodleID" : 3
 }
- 
+
 search
     http://www.gatkinson.site/noodlewall/event/search.php?s=fishing
     http://localhost/noodlewall/event/search.php?s=fishing

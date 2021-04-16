@@ -21,7 +21,7 @@ $event = new Event($db);
 $json = file_get_contents("php://input");
 
 $data = json_decode($json, true);
-  
+
 // set event id to be deleted
 $event->noodleID = $data['noodleID'];
 
