@@ -1,4 +1,4 @@
-This doc defines the api calls and their uses, with an example of each
+This doc defines the api calls and their uses
 
 
     FILES
@@ -26,6 +26,9 @@ delete
 search
     allows you to search all events by providing a string, searches event fields noodleTitle, noodleStatus, noodleLocation, and noodleTags
 
+getByID
+    allows you to return an event by passing it's id as an argument
+
 getEventsByUserID
     returns all events belonging to an individual user, by providing user id
 
@@ -47,6 +50,9 @@ delete
 
 search
     allows you to search all users by providing a string, searches user fields username, firstname, and lastname
+
+getByID
+    allows you to return a user by passing it's id as an argument
 
 getUserByEventID
     return a user that the provided eventid belongs to

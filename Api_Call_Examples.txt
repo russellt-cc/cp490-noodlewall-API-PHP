@@ -1,5 +1,4 @@
-
-
+This doc contains example(template) api calls
 
         interacting with events
 
@@ -59,6 +58,10 @@ delete
 search
     http://www.gatkinson.site/noodlewall/event/search.php?s=fishing
     http://localhost/noodlewall/event/search.php?s=fishing
+
+getByID
+    http://www.gatkinson.site/noodlewall/event/getByID.php?id=1
+    http://localhost/noodlewall/event/getByID.php?id=1
  
 getEventsByUserID
     http://www.gatkinson.site/noodlewall/event/getEventsByUserID.php?id=2
@@ -116,6 +119,10 @@ delete
 search
     http://www.gatkinson.site/noodlewall/user/search.php?s=fishing
     http://localhost/noodlewall/user/search.php?s=fishing
+
+getByID
+    http://www.gatkinson.site/noodlewall/user/getByID.php?id=1
+    http://localhost/noodlewall/user/getByID.php?id=1
 
 getUserByEventID
     http://www.gatkinson.site/noodlewall/user/getUserByEventID.php?id=2
