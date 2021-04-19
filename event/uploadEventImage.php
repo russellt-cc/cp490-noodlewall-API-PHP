@@ -31,7 +31,7 @@ $image = imagecreatefromstring($image);
 //set image blending to false, so image will have transparent background
 imagealphablending($image, false);
 
-// Set alpha flag
+//Set alpha flag
 imagesavealpha($image, true);
 
 if ($image) {
@@ -39,7 +39,7 @@ if ($image) {
     imagePng($image, $path);
     imagedestroy($image);
 
-    // set response code - 201 created
+    //set response code - 201 created
     http_response_code(201);
 
     //return the new full image path
