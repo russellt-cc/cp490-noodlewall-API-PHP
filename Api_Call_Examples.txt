@@ -75,7 +75,19 @@ getEventsByUserID
     http://www.gatkinson.site/noodlewall/event/getEventsByUserID.php?id=2
     http://localhost/noodlewall/event/getEventsByUserID.php?id=2
 
-
+uploadEventImage
+    http://www.gatkinson.site/noodlewall/event/uploadEventImage.php
+    http://www.localhost/noodlewall/event/uploadEventImage.php
+{
+    "image" : file
+}
+    
+deleteEventImage
+    http://www.gatkinson.site/noodlewall/event/deleteEventImage.php
+    http://www.localhost/noodlewall/event/deleteEventImage.php
+{
+    "imageAddress" : "http://gatkinson.site/noodlewall/images/events/example.png"
+}
 
 
 
@@ -136,9 +148,17 @@ getUserByEventID
     http://www.gatkinson.site/noodlewall/user/getUserByEventID.php?id=2
     http://localhost/noodlewall/user/getUserByEventID.php?id=2
 
+UploadUserIcon
+    http://www.gatkinson.site/noodlewall/user/uploadUserIcon.php
+    http://www.localhost/noodlewall/user/uploadUserIcon.php
+{
+    "image" : file
+}
 
-
-
-
-
+deleteUserIcon
+    http://www.gatkinson.site/noodlewall/user/deleteUserIcon.php
+    http://www.localhost/noodlewall/user/deleteUserIcon.php
+{
+    "iconAddress" : "http://gatkinson.site/noodlewall/images/userIcons/example.png"
+}
 

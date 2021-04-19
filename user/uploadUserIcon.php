@@ -43,7 +43,10 @@ if ($image) {
 
     //return the new full image path
     $fullPath = $pathOrigin . $localPath;
-    echo json_encode($fullPath);
+
+    $imageAddress=array("imageAddress" => $fullPath);
+
+    echo json_encode($imageAddress);
 } else {
 
     // set response code - 503 service unavailable

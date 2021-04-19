@@ -15,7 +15,6 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
         //set the local path to image
         //$pathOrigin = "http://localhost/noodlewall/";
 
-
 //get the image uploaded
 $file = $_FILES['image'];
 $temp = $file['tmp_name'];
@@ -44,7 +43,10 @@ if ($image) {
 
     //return the new full image path
     $fullPath = $pathOrigin . $localPath;
-    echo json_encode($fullPath);
+
+    $imageAddress=array("imageAddress" => $fullPath);
+
+    echo json_encode($imageAddress);
 } else {
 
     // set response code - 503 service unavailable

@@ -7,6 +7,10 @@ db_scripts folder contains folders with sql queries that when used on db will cr
 Api_Call_Example.txt contains template api GET & POST calls
 
 
+config/database.php - used by every function, and contains database connection details and credentials
+
+
+
 NOTES
 when using api locally, change the comments on the config/database.php, event/uploadEventImage.php, and user/uploadUserIcon.php
 
@@ -64,38 +68,38 @@ getUserByEventID
 
 
         final database tables and columns
-events table
-    noodleID 
-    noodleTitle
-    userID
-    noodleStatus
-    noodleDescription
-    noodleSummary
-    noodleTags 
-    noodleCoverImage
-    noodleImages 
-    noodleImageText 
-    noodleLocation
-    noodleDirections
-    noodleDate
-    noodleTime
-    noodlePrice
-    noodleMinTickets
-    noodleMaxTickets
-    noodleTicketsSold
-    noodleCutoff
+noodleID            -- required field   -- int(11) NOT NULL AUTO_INCREMENT,
+noodleTitle         -- required field   -- varchar(256)
+userID              -- required field   -- int(11)
+noodleStatus        -- required field   -- varchar(256)
+noodleDescription   -- required field   -- varchar(3000)
+noodleDescription                       -- varchar(512)
+noodleTags                              -- varchar(256)     required field at least one value -- currently just a long string, with comma separated values to parse through in api
+noodleCoverImage                        -- varchar(256)     string that stores address of image in website
+noodleImages                            -- varchar(512)
+noodleImageText                         -- varchar(3000)
+noodleLocation                          -- varchar(256)
+noodleDirections                        -- varchar(512)
+noodleDate                              -- varchar(256)
+noodleTime                              -- varchar(256)
+noodlePrice                             -- decimal(15,2)    15 is precision(total length of value) 2 is num of digits after decimal
+noodleMinTickets                        -- int(11)
+noodleMaxTickets                        -- int(11)
+noodleTicketsSold                       -- int(11)
+noodleCutoff                            -- varchar(256)
+-- right now the db auto stores empty integer values as 1
 
 
 
-users table
-    userID
-    userName
-    userFirstName
-    userLastName
-    userRating
-    userBio
-    userBioLong
-    userImage
+userID              -- required field
+userName            -- required field
+userFirstName       -- required field
+userLastName        -- required field
+userRating                              -- float 15
+userBio
+userBioLong
+userImage                               -- string that stores address of image in website
+
 
 
 

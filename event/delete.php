@@ -28,7 +28,7 @@ $event->noodleID = $data['noodleID'];
 // delete the event
 if($event->delete()){
 
-    // set response code - 200 ok
+    // set response code - 410 deleted
     http_response_code(410);
   
     // tell the user

@@ -76,7 +76,7 @@ if(
         echo json_encode(array("message" => "Unable to create event."));
     }
 }
-  
+
 // tell the user data is incomplete
 else{
 
