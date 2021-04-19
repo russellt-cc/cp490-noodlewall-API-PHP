@@ -7,7 +7,7 @@ header("Content-Type: application/json; charset=UTF-8");
 include_once '../config/database.php';
 include_once '../objects/user.php';
   
-// instantiate database and event object
+// instantiate database and user object
 $database = new Database();
 $db = $database->getConnection();
   

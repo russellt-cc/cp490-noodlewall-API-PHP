@@ -29,7 +29,7 @@ $event->noodleID = $data['noodleID'];
 if($event->delete()){
 
     // set response code - 200 ok
-    http_response_code(200);
+    http_response_code(410);
   
     // tell the user
     echo json_encode(array("message" => "Event was deleted."));

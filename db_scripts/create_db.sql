@@ -9,9 +9,13 @@ CREATE TABLE IF NOT EXISTS `events` (
   `userID` int(11) NOT NULL,
   `noodleStatus` varchar(256) NOT NULL,
   `noodleDescription` varchar(3000) NOT NULL,
+  `noodleSummary` varchar(512) NOT NULL,
   `noodleTags` varchar(256) NOT NULL,
-  `noodleImage` varchar(256),
+  `noodleCoverImage` varchar(256),
+  `noodleImages` varchar(512),
+  `noodleImageText` varchar(3000),
   `noodleLocation` varchar(256),
+  `noodleDirections` varchar(512),
   `noodleDate` varchar(256),
   `noodleTime` varchar(256),
   `noodlePrice` decimal(15,2),
@@ -21,7 +25,6 @@ CREATE TABLE IF NOT EXISTS `events` (
   `noodleCutoff` varchar(256),
   PRIMARY KEY (`noodleID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
-
 
 CREATE TABLE IF NOT EXISTS `users` (
   `userID` int(11) NOT NULL AUTO_INCREMENT,

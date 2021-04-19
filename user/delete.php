@@ -6,7 +6,7 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
   
-// include database and object file
+// include database and user file
 include_once '../config/database.php';
 include_once '../objects/user.php';
   
@@ -17,7 +17,7 @@ $db = $database->getConnection();
 // prepare event object
 $event = new User($db);
   
-// get event id
+// get user id
 $json = file_get_contents("php://input");
 
 $data = json_decode($json, true);
@@ -29,7 +29,7 @@ $event->userID = $data['userID'];
 if($event->delete()){
   
     // set response code - 200 ok
-    http_response_code(200);
+    http_response_code(410);
   
     // tell the user
     echo json_encode(array("message" => "user was deleted."));

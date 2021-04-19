@@ -12,9 +12,13 @@ class Event
     public $userID;
     public $noodleStatus;
     public $noodleDescription;
+    public $noodleSummary;
     public $noodleTags;
-    public $noodleImage;
+    public $noodleCoverImage;
+    public $noodleImages;
+    public $noodleImageText;
     public $noodleLocation;
+    public $noodleDirections;
     public $noodleDate;
     public $noodleTime;
     public $noodlePrice;
@@ -60,9 +64,13 @@ class Event
             userID= :userID,
             noodleStatus= :noodleStatus,
             noodleDescription= :noodleDescription,
+            noodleSummary= :noodleSummary,
             noodleTags= :noodleTags,
-            noodleImage= :noodleImage,
+            noodleCoverImage= :noodleCoverImage,
+            noodleImages= :noodleImages,
+            noodleImageText= :noodleImageText,
             noodleLocation= :noodleLocation,
+            noodleDirections= :noodleDirections,
             noodleDate= :noodleDate,
             noodleTime= :noodleTime,
             noodlePrice= :noodlePrice,
@@ -79,9 +87,13 @@ class Event
         $this->userID = htmlspecialchars(strip_tags($this->userID));
         $this->noodleStatus = htmlspecialchars(strip_tags($this->noodleStatus));
         $this->noodleDescription = htmlspecialchars(strip_tags($this->noodleDescription));
+        $this->noodleSummary = htmlspecialchars(strip_tags($this->noodleSummary));
         $this->noodleTags = htmlspecialchars(strip_tags($this->noodleTags));
-        $this->noodleImage = htmlspecialchars(strip_tags($this->noodleImage));
+        $this->noodleCoverImage = htmlspecialchars(strip_tags($this->noodleCoverImage));
+        $this->noodleImages = htmlspecialchars(strip_tags($this->noodleImages));
+        $this->noodleImageText = htmlspecialchars(strip_tags($this->noodleImageText));
         $this->noodleLocation = htmlspecialchars(strip_tags($this->noodleLocation));
+        $this->noodleDirections = htmlspecialchars(strip_tags($this->noodleDirections));
         $this->noodleDate = htmlspecialchars(strip_tags($this->noodleDate));
         $this->noodleTime = htmlspecialchars(strip_tags($this->noodleTime));
         $this->noodlePrice = htmlspecialchars(strip_tags($this->noodlePrice));
@@ -96,9 +108,13 @@ class Event
         $stmt->bindParam(":userID", $this->userID);
         $stmt->bindParam(":noodleStatus", $this->noodleStatus);
         $stmt->bindParam(":noodleDescription", $this->noodleDescription);
+        $stmt->bindParam(":noodleSummary", $this->noodleSummary);
         $stmt->bindParam(":noodleTags", $this->noodleTags);
-        $stmt->bindParam(":noodleImage", $this->noodleImage);
+        $stmt->bindParam(":noodleCoverImage", $this->noodleCoverImage);
+        $stmt->bindParam(":noodleImages", $this->noodleImages);
+        $stmt->bindParam(":noodleImageText", $this->noodleImageText);
         $stmt->bindParam(":noodleLocation", $this->noodleLocation);
+        $stmt->bindParam(":noodleDirections", $this->noodleDirections);
         $stmt->bindParam(":noodleDate", $this->noodleDate);
         $stmt->bindParam(":noodleTime", $this->noodleTime);
         $stmt->bindParam(":noodlePrice", $this->noodlePrice);
@@ -140,9 +156,13 @@ class Event
             userID= :userID,
             noodleStatus= :noodleStatus,
             noodleDescription= :noodleDescription,
+            noodleSummary= :noodleSummary,
             noodleTags= :noodleTags,
-            noodleImage= :noodleImage,
+            noodleCoverImage= :noodleCoverImage,
+            noodleImages= :noodleImages,
+            noodleImageText= :noodleImageText,
             noodleLocation= :noodleLocation,
+            noodleDirections= :noodleDirections,
             noodleDate= :noodleDate,
             noodleTime= :noodleTime,
             noodlePrice= :noodlePrice,
@@ -162,9 +182,13 @@ class Event
         $this->userID = htmlspecialchars(strip_tags($this->userID));
         $this->noodleStatus = htmlspecialchars(strip_tags($this->noodleStatus));
         $this->noodleDescription = htmlspecialchars(strip_tags($this->noodleDescription));
+        $this->noodleSummary = htmlspecialchars(strip_tags($this->noodleSummary));
         $this->noodleTags = htmlspecialchars(strip_tags($this->noodleTags));
-        $this->noodleImage = htmlspecialchars(strip_tags($this->noodleImage));
+        $this->noodleCoverImage = htmlspecialchars(strip_tags($this->noodleCoverImage));
+        $this->noodleImages = htmlspecialchars(strip_tags($this->noodleImages));
+        $this->noodleImageText = htmlspecialchars(strip_tags($this->noodleImageText));
         $this->noodleLocation = htmlspecialchars(strip_tags($this->noodleLocation));
+        $this->noodleDirections = htmlspecialchars(strip_tags($this->noodleDirections));
         $this->noodleDate = htmlspecialchars(strip_tags($this->noodleDate));
         $this->noodleTime = htmlspecialchars(strip_tags($this->noodleTime));
         $this->noodlePrice = htmlspecialchars(strip_tags($this->noodlePrice));
@@ -179,9 +203,13 @@ class Event
         $stmt->bindParam(":userID", $this->userID);
         $stmt->bindParam(":noodleStatus", $this->noodleStatus);
         $stmt->bindParam(":noodleDescription", $this->noodleDescription);
+        $stmt->bindParam(":noodleSummary", $this->noodleSummary);
         $stmt->bindParam(":noodleTags", $this->noodleTags);
-        $stmt->bindParam(":noodleImage", $this->noodleImage);
+        $stmt->bindParam(":noodleCoverImage", $this->noodleCoverImage);
+        $stmt->bindParam(":noodleImages", $this->noodleImages);
+        $stmt->bindParam(":noodleImageText", $this->noodleImageText);
         $stmt->bindParam(":noodleLocation", $this->noodleLocation);
+        $stmt->bindParam(":noodleDirections", $this->noodleDirections);
         $stmt->bindParam(":noodleDate", $this->noodleDate);
         $stmt->bindParam(":noodleTime", $this->noodleTime);
         $stmt->bindParam(":noodlePrice", $this->noodlePrice);
@@ -229,7 +257,7 @@ class Event
         // select all query
         $query = "SELECT * FROM $this->table_name
             WHERE
-                noodleTitle LIKE ? OR noodleStatus LIKE ? OR noodleLocation LIKE ? OR noodleTags LIKE ?
+                noodleTitle LIKE ? OR noodleStatus LIKE ? OR noodleSummary LIKE ? OR noodleLocation LIKE ? OR noodleTags LIKE ?
             ORDER BY
                 noodleID DESC";
 
@@ -245,6 +273,7 @@ class Event
         $stmt->bindParam(2, $keywords);
         $stmt->bindParam(3, $keywords);
         $stmt->bindParam(4, $keywords);
+        $stmt->bindParam(5, $keywords);
 
         // execute query
         $stmt->execute();

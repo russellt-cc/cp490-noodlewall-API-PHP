@@ -7,14 +7,14 @@ header("Content-Type: application/json; charset=UTF-8");
 include_once '../config/database.php';
 include_once '../objects/user.php';
   
-// instantiate database and event object
+// instantiate database and user object
 $database = new Database();
 $db = $database->getConnection();
   
 // initialize object
 $user = new User($db);
   
-// query events
+// query users
 $stmt = $user->read();
 $num = $stmt->rowCount();
   

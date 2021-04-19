@@ -68,9 +68,13 @@ events table
     userID
     noodleStatus
     noodleDescription
-    noodleTags
-    noodleImage
+    noodleSummary
+    noodleTags 
+    noodleCoverImage
+    noodleImages 
+    noodleImageText 
     noodleLocation
+    noodleDirections
     noodleDate
     noodleTime
     noodlePrice
@@ -78,6 +82,7 @@ events table
     noodleMaxTickets
     noodleTicketsSold
     noodleCutoff
+
 
 
 users table

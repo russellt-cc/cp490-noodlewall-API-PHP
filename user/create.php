@@ -9,7 +9,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 // get database connection
 include_once '../config/database.php';
 
-// instantiate event object
+// instantiate user object
 include_once '../objects/user.php';
 
 $database = new Database();
@@ -39,9 +39,7 @@ if(
     $user->userBioLong = $data['userBioLong'];
     $user->userImage = $data['userImage'];
 
-    // $event->created = date('Y-m-d H:i:s');
-
-    // create the event
+    // create the user
     if($stmt = $user->create()){
   
         // set response code - 201 created

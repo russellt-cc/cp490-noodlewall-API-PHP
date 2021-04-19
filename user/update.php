@@ -14,15 +14,15 @@ include_once '../objects/user.php';
 $database = new Database();
 $db = $database->getConnection();
 
-// prepare event object
+// prepare user object
 $user = new User($db);
 
-// get event id
+// get user id
 $json = file_get_contents("php://input");
 
 $data = json_decode($json, true);
 
-// set event id to be deleted
+// set user id to be updated
 $user->userID = $data['userID'];
 
 // set user property values

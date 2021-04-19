@@ -23,7 +23,7 @@ create
     "noodleCutoff" : null
 }
 
-read -- has dummy users included
+read
     http://www.gatkinson.site/noodlewall/event/read.php
     http://localhost/noodlewall/event/read.php
 
@@ -91,7 +91,7 @@ create
     "userImage" : null
 }
  
-read -- has dummy users included
+read
     http://www.gatkinson.site/noodlewall/user/read.php
     http://localhost/noodlewall/user/read.php
 
