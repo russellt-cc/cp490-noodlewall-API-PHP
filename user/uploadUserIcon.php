@@ -6,11 +6,13 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-//set the remote path to image
-$pathOrigin = "http://gatkinson.site/noodlewall/";
 
-//set the local path to image
-//$pathOrigin = "http://localhost/noodlewall/";
+    //toggle between these connections when deploying to online remote api / local api
+        //set the remote path to image
+        $pathOrigin = "http://gatkinson.site/noodlewall/";
+
+        //set the local path to image
+        //$pathOrigin = "http://localhost/noodlewall/";
 
 
 //get the image uploaded
@@ -18,7 +20,7 @@ $file = $_FILES['image'];
 $temp = $file['tmp_name'];
 
 //set the image upload path
-$localPath = 'images/userIcons' . uniqid() . '.png';
+$localPath = 'images/userIcons/' . uniqid() . '.png';
 $path = '../' . $localPath;
 
 //upload image

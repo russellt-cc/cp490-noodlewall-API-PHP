@@ -7,6 +7,8 @@ db_scripts folder contains folders with sql queries that when used on db will cr
 Api_Call_Example.txt contains template api GET & POST calls
 
 
+NOTES
+when using api locally, change the comments on the config/database.php, event/uploadEventImage.php, and user/uploadUserIcon.php
 
 
         EVENTS CALLS
