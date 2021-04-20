@@ -6,8 +6,8 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-
-    //toggle between these connections when deploying to online remote api / local api
+    //toggle between these connections when deploying to online remote api / local api 
+    //all it changes is the path returned to the function call
         //set the remote path to image
         $pathOrigin = "http://gatkinson.site/noodlewall/";
 

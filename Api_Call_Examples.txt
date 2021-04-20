@@ -5,6 +5,7 @@ This doc contains example(template) api calls
 create
     http://www.gatkinson.site/noodlewall/event/create.php
     http://localhost/noodlewall/event/create.php
+body
 {
     "noodleID" : null,
     "noodleTitle" : "event title",
@@ -34,6 +35,7 @@ read
 update
     http://www.gatkinson.site/noodlewall/event/update.php
     http://localhost/noodlewall/event/update.php
+body
 {
     "noodleID" : 3,
     "noodleTitle" : "new event title",
@@ -59,6 +61,7 @@ update
 delete
     http://www.gatkinson.site/noodlewall/event/delete.php
     http://localhost/noodlewall/event/delete.php
+body
 {
     "noodleID" : 3
 }
@@ -78,6 +81,7 @@ getEventsByUserID
 uploadEventImage
     http://www.gatkinson.site/noodlewall/event/uploadEventImage.php
     http://www.localhost/noodlewall/event/uploadEventImage.php
+body
 {
     "image" : file
 }
@@ -85,6 +89,7 @@ uploadEventImage
 deleteEventImage
     http://www.gatkinson.site/noodlewall/event/deleteEventImage.php
     http://www.localhost/noodlewall/event/deleteEventImage.php
+body
 {
     "imageAddress" : "http://gatkinson.site/noodlewall/images/events/example.png"
 }
@@ -100,6 +105,7 @@ deleteEventImage
 create
     http://www.gatkinson.site/noodlewall/user/create.php
     http://localhost/noodlewall/user/create.php
+body
 {
     "userID" : null,
     "userName" : "username1",
@@ -118,6 +124,7 @@ read
 update
     http://www.gatkinson.site/noodlewall/user/update.php
     http://localhost/noodlewall/user/update.php
+body
 {
     "userID" : 21,
     "userName" : "new username1",
@@ -132,6 +139,7 @@ update
 delete
     http://www.gatkinson.site/noodlewall/user/delete.php
     http://localhost/noodlewall/user/delete.php
+body
 {
     "noodleID" : 3
 }
@@ -151,6 +159,7 @@ getUserByEventID
 UploadUserIcon
     http://www.gatkinson.site/noodlewall/user/uploadUserIcon.php
     http://www.localhost/noodlewall/user/uploadUserIcon.php
+body
 {
     "image" : file
 }
@@ -158,6 +167,7 @@ UploadUserIcon
 deleteUserIcon
     http://www.gatkinson.site/noodlewall/user/deleteUserIcon.php
     http://www.localhost/noodlewall/user/deleteUserIcon.php
+body
 {
     "iconAddress" : "http://gatkinson.site/noodlewall/images/userIcons/example.png"
 }

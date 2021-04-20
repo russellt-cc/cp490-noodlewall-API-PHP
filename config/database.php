@@ -4,7 +4,7 @@ class Database
 
 
 
-    //toggle between these connections when deploying to online remote api / local api
+    //toggle between these connections when deploying to local vs remote repository
 
 
         // specify local database credentials 
@@ -14,6 +14,8 @@ class Database
         private $password = "";
         public $conn;
 
+        //privileges:   all (root user)
+
     /*
         // specify remote database credentials
         private $host = "localhost";
@@ -21,7 +23,10 @@ class Database
         private $username = "gatkison_noodler";
         private $password = "noodlewall123!";
         public $conn;
+
+        //privileges:   select, create, delete, update
 */
+
     
 
     // get the database connection
