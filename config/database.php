@@ -18,15 +18,21 @@ class Database
 */
     
         // specify remote database credentials
-        private $host = "localhost";
-        private $db_name = "gatkison_noodlewall_db";
-        private $username = "gatkison_noodler";
-        private $password = "noodlewall123!";
-        public $conn;
+        // private $host = "localhost";
+        // private $db_name = "gatkison_noodlewall_db";
+        // private $username = "gatkison_noodler";
+        // private $password = "noodlewall123!";
+        // public $conn;
 
         //privileges:   select, create, delete, update
 
-    
+
+        private $host = "localhost";
+        private $db_name = "noodlewall_db";
+        private $username = "rtennant_noodler";
+        private $password = "noodlewall123!";
+        public $conn;
+        
 
     // get the database connection
     public function getConnection()
