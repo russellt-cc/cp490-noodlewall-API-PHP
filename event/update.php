@@ -66,3 +66,4 @@ else {
     // tell the user
     echo json_encode(array("message" => "Unable to update event."));
 }
+?>

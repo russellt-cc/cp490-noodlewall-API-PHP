@@ -6,7 +6,7 @@ class Database
 
     //toggle between these connections when deploying to local vs remote repository
 
-
+/*
         // specify local database credentials 
         private $host = "localhost";
         private $db_name = "noodlewall_db";
@@ -15,8 +15,8 @@ class Database
         public $conn;
 
         //privileges:   all (root user)
-
-    /*
+*/
+    
         // specify remote database credentials
         private $host = "localhost";
         private $db_name = "gatkison_noodlewall_db";
@@ -25,7 +25,6 @@ class Database
         public $conn;
 
         //privileges:   select, create, delete, update
-*/
 
     
 
