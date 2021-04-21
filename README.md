@@ -1,21 +1,27 @@
 # Noodlewall Prototype API
 Simple overview of API uses/purpose.
-* Griffin Atkinson 20/04/2021 
+* Griffin Atkinson 04/2021 
 * for FRMH coop, for CP490 - Confederation College
 
 ## Published API Document
-* Postman Doc (https://documenter.getpostman.com/view/15350394/TzJvdbor)
+* For full API documentation visit (https://documenter.getpostman.com/view/15350394/TzJvdbor)
+
+## Intro
+* This API was developed by Griffin Atkinson, April 2021, in order to communicate with the React Noodlewall prototype, as part of a coop placement for FRMH at Confederation College.
+* This API can be used both locally and remotely, although to use locally, small manual modifications need to be made to files, and alternate database setup procedure must be followed, details are outlined clearly throughout setup process.
+* Currently the remote repository is hosted on my personal site "gatkinson.site", and will likely be unavailable shortly after the coop placement ends
 
 # Description
-This API was developed by Griffin Atkinson, April 2021, in order to communicate with the React Noodlewall prototype, as part of a coop placement for FRMH at Confederation College.
-It contains the functionality for the frontend to create/read/update/delete user profiles and the user's events
-* currently the remote repository is hosted on my personal site "gatkinson.site", and will likely be unavailable shortly after the coop placement ends
+* This API's functionality is to be used by a frontend prototype to store user accounts and event objects, as well as corresponding images, and interact with them. 
+* It contains the functionality for the frontend to create/read/update/delete user profiles and the user's events
 
 # Getting Started
-* Endpoint example calls -> see API_Call_Examples.txt
-* Local vs Remote repository, when using api locally,
-    -> change the database connection info on the config/database.php from the remote repository connection info, to the local repository connection info supplied
-    -> change and the addresses in event/uploadEventImage.php, and user/uploadUserIcon.php from the remote repository address, to the local repository address supplied
+* 1 - Setup database -> See Database Setup
+* 2 - Modify files if using repository locally.
+	Local vs Remote repository, when using api locally,
+    	-> change the database connection info on the config/database.php from the remote repository connection info, to the local repository connection info supplied
+    	-> change and the addresses in event/uploadEventImage.php, and user/uploadUserIcon.php from the remote repository address, to the local repository address supplied
+* 3 - Make calls to the endpoints -> see API_Call_Examples.txt
 
 # Database Setup
 *   config/database.php -> contains database connection details and credentials (see file to uncomment/comment details when connecting to local vs remote repositories)
@@ -47,94 +53,94 @@ cp490-noodlewall-API-PHP/
 #  Database Structure
 ##  Events Table
 
-    noodleID            -- required field   -- int(11) NOT NULL AUTO_INCREMENT
-    noodleTitle         -- required field   -- varchar(256)
-    userID              -- required field   -- int(11)
-    noodleStatus        -- required field   -- varchar(256)
-    noodleDescription   -- required field   -- varchar(3000)
-    noodleSummary                           -- varchar(512)
-    noodleTags                              -- varchar(256)     required field at least one value -- a long string, with comma separated values
-    noodleCoverImage                        -- varchar(256)     string that stores address of image in website
-    noodleImages                            -- varchar(512)
-    noodleImageText                         -- varchar(3000)
-    noodleLocation                          -- varchar(256)
-    noodleDirections                        -- varchar(512)
-    noodleDate                              -- varchar(256)
-    noodleTime                              -- varchar(256)
-    noodlePrice                             -- decimal(15,2)    15 is precision(total length of value) 2 is num of digits after decimal
-    noodleMinTickets                        -- int(11)
-    noodleMaxTickets                        -- int(11)
-    noodleTicketsSold                       -- int(11)
-    noodleCutoff                            -- varchar(256)
+    noodleID            -- required field   -- int(11)			unique ID of event - auto generated
+    noodleTitle         -- required field   -- varchar(256)		name of the event
+    userID              -- required field   -- int(11)			ID of the user the event belongs to
+    noodleStatus        -- required field   -- varchar(256)		event/dream status
+    noodleDescription   -- required field   -- varchar(3000)		long description of event
+    noodleSummary                           -- varchar(512)		short descriptiopn of event
+    noodleTags                              -- varchar(256)     	short tags/categories event belongs to -- a long csv string
+    noodleCoverImage                        -- varchar(256)     	string that stores address of image in website
+    noodleImages                            -- varchar(512)		long csv string that stores address of images in website
+    noodleImageText                         -- varchar(3000)		long csv string that stores texts coresponding to images in website
+    noodleLocation                          -- varchar(256)		location of event
+    noodleDirections                        -- varchar(512)		directions to event
+    noodleDate                              -- varchar(256)		date of event
+    noodleTime                              -- varchar(256)		time of event
+    noodlePrice                             -- decimal(15,2)    	price of tickets 15 is precision(total length of value) 2 is num of digits after decimal
+    noodleMinTickets                        -- int(11)			minimum number of tickets sold for event to take place
+    noodleMaxTickets                        -- int(11)			maximum number of tickets available
+    noodleTicketsSold                       -- int(11)			current number of sold tickets
+    noodleCutoff                            -- varchar(256)		cutoff date for event funding
 
 ##   Users Table
 
-    userID              -- required field   -- int(11) NOT NULL AUTO_INCREMENT
-    userName            -- required field   -- varchar(256) NOT NULL
-    userFirstName       -- required field   -- varchar(256) NOT NULL
-    userLastName        -- required field   -- varchar(256) NOT NULL
-    userRating                              -- float (15)
-    userBio                                 -- varchar(256)
-    userBioLong                             -- varchar(3000)
-    userImage                               -- varchar(256)     string that stores address of image in website
+    userID              -- required field   -- int(11)			unique ID of user - auto generated
+    userName            -- required field   -- varchar(256)		user's username	
+    userFirstName       -- required field   -- varchar(256)		user's firstname
+    userLastName        -- required field   -- varchar(256)		user's lastname
+    userRating                              -- float (15)		user's rating 0-5
+    userBio                                 -- varchar(256)		short version of user's bio
+    userBioLong                             -- varchar(3000)		long version of user's bio
+    userImage                               -- varchar(256)     	address of user's icon image
 
 #  Endpoints
 ## Event Endpoints
 * create.php
-    POST - allows you to create an event in the db, by providing a json event object containing event info
+    POST - allows you to create an event in the db
 
 * delete.php
-    POST - allows you to delete an event, by providing an event's id
+    POST - allows you to delete an event
 
 * deleteEventImage.php
-    POST - allows you to delete an event image, by providing a url or path to the image
+    POST - allows you to delete an event image
 
 * getByID.php
-    GET - allows you to return an event's information by passing it's id as an argument
+    GET - allows you to return an individual event's information
 
 * getEventsByUserID.php
-    GET - returns all events and their details belonging to an individual user, by providing user id
+    GET - returns all events and their information belonging to an individual user
 
 * read.php
-    GET - returns array of json objects each containing all information about individual events
+    GET - returns all information about all individual events
 
 * search.php
-    GET - allows you to search all events by providing a string, searches event fields noodleTitle, noodleStatus, noodleLocation, and noodleTags
+    GET - allows you to search all events
 
 * update.php
-    POST - allows you to edit an event, by providing a json event object containing all information about an event, including the id of the event to update
+    POST - allows you to edit an event
 
 * uploadEventImage.php
-    POST - allows you to store an image in the images/events directory, by passing the image file in the message body
+    POST - allows you to store an event image
 
 
 ## User Endpoints
 * create.php
-    POST - allows you to create a user in the db, by providing a json user object containing user info
+    POST - allows you to create a user
 
 * delete.php
-    POST - allows you to delete a user, by providing a user's id
+    POST - allows you to delete a user
 
 * deleteUserIcon.php
-    POST - allows you to delete a user icon image, by providing a url or path to the image
+    POST - allows you to delete a user's icon image
 
 * getByID.php
-    GET - allows you to return a user by passing it's id as an argument
+    GET - allows you to return all information about a user
 
 * getUserByEventID.php
-    GET - return a user that the provided eventid belongs to
+    GET - allows you to return all information about a user by one of their event's IDs
 
 * read.php
-    GET - returns array of json objects each containing all information about individual users
+    GET - returns all information about all users
 
 * search.php
-    POST - allows you to search all users by providing a string, searches user fields username, firstname, and lastname
+    POST - allows you to search all users
 
 * update.php
-    POST -allows you to edit a user, by providing a json event object containing all information about a user, including the id of the user to update
+    POST -allows you to edit a user
 
 * uploadUserIcon.php
-    POST - allows you to store an image in the images/userIcons directory, by passing the image file in the message body
+    POST - allows you to store a user's icon image
 
 ## Dependencies
 
