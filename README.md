@@ -3,6 +3,9 @@ Simple overview of API uses/purpose.
 * Griffin Atkinson 20/04/2021 
 * for FRMH coop, for CP490 - Confederation College
 
+## Published API Document
+* Postman Doc (https://documenter.getpostman.com/view/15350394/TzJvdbor)
+
 # Description
 This API was developed by Griffin Atkinson, April 2021, in order to communicate with the React Noodlewall prototype, as part of a coop placement for FRMH at Confederation College.
 It contains the functionality for the frontend to create/read/update/delete user profiles and the user's events
@@ -140,5 +143,3 @@ cp490-noodlewall-API-PHP/
 ## Authors
 
 Griffin Atkinson (https://github.com/griffthegrouch)
-
-# API Endpoint Examples
