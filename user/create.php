@@ -37,7 +37,7 @@ if(
     if (!empty($data['userRating'])) {
           $user->userRating = $data['userRating'];
     } else {
-      $user->userRating = null;
+      $user->userRating = 3;
     }
     if (!empty($data['userBio'])) {
       $user->userBio = $data['userBio'];
