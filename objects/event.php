@@ -120,7 +120,7 @@ class Event
         $this->noodleDirections = htmlspecialchars(strip_tags($this->noodleDirections));
         $this->noodleDate = htmlspecialchars(strip_tags($this->noodleDate));
         $this->noodleTime = htmlspecialchars(strip_tags($this->noodleTime));
-        $this->noodlePrice = htmlspecialchars(strip_tags($this->noodlePrice));
+        //$this->noodlePrice = htmlspecialchars(strip_tags($this->noodlePrice));
         $this->noodleMinTickets = htmlspecialchars(strip_tags($this->noodleMinTickets));
         $this->noodleMaxTickets = htmlspecialchars(strip_tags($this->noodleMaxTickets));
         $this->noodleTicketsSold = htmlspecialchars(strip_tags($this->noodleTicketsSold));
