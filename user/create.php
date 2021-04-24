@@ -66,7 +66,7 @@ if(
   
         // return the newly created user
         //echo json_encode($stmt->fetch(PDO::FETCH_ASSOC));
-        echo json_encode(array("message" => "User was created."));
+        echo json_encode(array("message" => "User was created.", "userID" => $ID));
 
     }
   
