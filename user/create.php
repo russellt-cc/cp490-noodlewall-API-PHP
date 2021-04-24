@@ -36,15 +36,23 @@ if(
     $user->userLastName = $data['userLastName'];
     if (!empty($data['userRating'])) {
           $user->userRating = $data['userRating'];
+    } else {
+      $user->userRating = null;
     }
     if (!empty($data['userBio'])) {
       $user->userBio = $data['userBio'];
+    } else {
+      $user->userBio = null;
     }
     if (!empty($data['userBioLong'])) {
       $user->userBioLong = $data['userBioLong'];
+    } else {
+      $user->userBioLong = null;
     }
     if (!empty($data['userImage'])) {
       $user->userImage = $data['userImage'];
+    } else {
+      $user->userImage = null;
     }
 
     // create the user
