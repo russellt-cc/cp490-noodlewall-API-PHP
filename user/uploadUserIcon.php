@@ -9,7 +9,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
     //toggle between these connections when deploying to online remote api / local api 
     //all it changes is the path returned to the function call
         //set the remote path to image
-        $pathOrigin = "http://gatkinson.site/noodlewall/";
+        $pathOrigin = "http://35.182.244.152/noodlewall/";
 
         //set the local path to image
         //$pathOrigin = "http://localhost/noodlewall/";
