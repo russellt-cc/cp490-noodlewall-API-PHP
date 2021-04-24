@@ -30,7 +30,7 @@ if(
 ){
   
     // set user property values
-    $user->userID = $data['userID'];
+    //$user->userID = $data['userID'];
     $user->userName = $data['userName'];
     $user->userFirstName = $data['userFirstName'];
     $user->userLastName = $data['userLastName'];
