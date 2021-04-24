@@ -65,6 +65,9 @@ class User
         $this->userBioLong = htmlspecialchars(strip_tags($this->userBioLong));
         $this->userImage = htmlspecialchars(strip_tags($this->userImage));
 
+        // parse numeric values
+        $this->userRating = intval($this->userRating);
+
         // bind values
         $stmt->bindParam(":userName", $this->userName);
         $stmt->bindParam(":userFirstName", $this->userFirstName);
@@ -117,6 +120,10 @@ class User
         $this->userBio = htmlspecialchars(strip_tags($this->userBio));
         $this->userBioLong = htmlspecialchars(strip_tags($this->userBioLong));
         $this->userImage = htmlspecialchars(strip_tags($this->userImage));
+
+        // parse numeric values
+        $this->userID = intval($this->userID);
+        $this->userRating = intval($this->userRating);
 
         // bind values
         $stmt->bindParam(":userID", $this->userID);

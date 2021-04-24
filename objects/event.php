@@ -99,6 +99,13 @@ class Event
         $this->noodleTicketsSold = htmlspecialchars(strip_tags($this->noodleTicketsSold));
         $this->noodleCutoff = htmlspecialchars(strip_tags($this->noodleCutoff));
 
+        // parse numeric values
+        $this->userID = intval($this->userID);
+        $this->noodlePrice = floatval($this->noodlePrice);
+        $this->noodleMinTickets = intval($this->noodleMinTickets);
+        $this->noodleMaxTickets = intval($this->noodleMaxTickets);
+        $this->noodleTicketsSold = intval($this->noodleTicketsSold);
+
         // bind values
         $stmt->bindParam(":noodleTitle", $this->noodleTitle);
         $stmt->bindParam(":userID", $this->userID);
@@ -183,6 +190,14 @@ class Event
         $this->noodleMaxTickets = htmlspecialchars(strip_tags($this->noodleMaxTickets));
         $this->noodleTicketsSold = htmlspecialchars(strip_tags($this->noodleTicketsSold));
         $this->noodleCutoff = htmlspecialchars(strip_tags($this->noodleCutoff));
+
+        // parse numeric values
+        $this->noodleID = intval($this->noodleID);
+        $this->userID = intval($this->userID);
+        $this->noodlePrice = floatval($this->noodlePrice);
+        $this->noodleMinTickets = intval($this->noodleMinTickets);
+        $this->noodleMaxTickets = intval($this->noodleMaxTickets);
+        $this->noodleTicketsSold = intval($this->noodleTicketsSold);        
 
         // bind values
         $stmt->bindParam(":noodleID", $this->noodleID);
