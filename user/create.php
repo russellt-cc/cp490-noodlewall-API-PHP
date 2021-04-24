@@ -55,9 +55,11 @@ if(
       $user->userImage = null;
     }
 
+    $ID = $user->create();
+
     // create the user
     //if($stmt = $user->create()){
-      if($user->create()){
+      if($ID){
   
         // set response code - 201 created
         http_response_code(201);
