@@ -59,7 +59,7 @@ if(
 
     // create the user
     //if($stmt = $user->create()){
-      if($ID){
+      if($ID !== false){
   
         // set response code - 201 created
         http_response_code(201);
