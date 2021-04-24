@@ -106,7 +106,7 @@ class User
             //}
 
               // Return the insert id
-              return $conn -> lastInsertId;
+              return $conn -> lastInsertId();
 
         }
 
