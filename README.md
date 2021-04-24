@@ -6,6 +6,12 @@ Simple overview of API uses/purpose.
 ## Published API Document
 * For full API documentation visit (https://documenter.getpostman.com/view/15350394/TzJvdbor)
 
+## Dependencies
+* XAMPP (Apache + MYSQL) required
+
+## Authors
+Griffin Atkinson (https://github.com/griffthegrouch)
+
 ## Intro
 * This API was developed by Griffin Atkinson, April 2021, in order to communicate with the React Noodlewall prototype, as part of a coop placement for FRMH at Confederation College.
 * This API can be used both locally and remotely, although to use locally, small manual modifications need to be made to files, and alternate database setup procedure must be followed, details are outlined clearly throughout setup process.
@@ -141,11 +147,3 @@ cp490-noodlewall-API-PHP/
 
 * uploadUserIcon.php
     POST - allows you to store a user's icon image
-
-## Dependencies
-
-* XAMPP (Apache + MYSQL) required
-
-## Authors
-
-Griffin Atkinson (https://github.com/griffthegrouch)
