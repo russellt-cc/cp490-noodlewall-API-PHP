@@ -44,23 +44,34 @@ class User
     {
 
         // query to insert record
+        // $query = "INSERT INTO
+        //         " . $this->table_name . "
+        //     SET
+        //     userID= :userID, 
+        //     userName= :userName,
+        //     userFirstName= :userFirstName,
+        //     userLastName= :userLastName,
+        //     userRating= :userRating,
+        //     userBio= :userBio,
+        //     userBioLong= :userBioLong,
+        //     userImage= :userImage;";
+        
         $query = "INSERT INTO
-                " . $this->table_name . "
-            SET
-            userID= :userID, 
-            userName= :userName,
-            userFirstName= :userFirstName,
-            userLastName= :userLastName,
-            userRating= :userRating,
-            userBio= :userBio,
-            userBioLong= :userBioLong,
-            userImage= :userImage;";
+            " . $this->table_name . "
+        SET
+        userName= :userName,
+        userFirstName= :userFirstName,
+        userLastName= :userLastName,
+        userRating= :userRating,
+        userBio= :userBio,
+        userBioLong= :userBioLong,
+        userImage= :userImage;";
 
         // prepare query
         $stmt = $this->conn->prepare($query);
 
         // sanitize
-        $this->userID = htmlspecialchars(strip_tags($this->userID));
+        //$this->userID = htmlspecialchars(strip_tags($this->userID));
         $this->userName = htmlspecialchars(strip_tags($this->userName));
         $this->userFirstName = htmlspecialchars(strip_tags($this->userFirstName));
         $this->userLastName = htmlspecialchars(strip_tags($this->userLastName));
@@ -70,7 +81,7 @@ class User
         $this->userImage = htmlspecialchars(strip_tags($this->userImage));
 
         // bind values
-        $stmt->bindParam(":userID", $this->userID);
+        //$stmt->bindParam(":userID", $this->userID);
         $stmt->bindParam(":userName", $this->userName);
         $stmt->bindParam(":userFirstName", $this->userFirstName);
         $stmt->bindParam(":userLastName", $this->userLastName);
