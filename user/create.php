@@ -34,10 +34,18 @@ if(
     $user->userName = $data['userName'];
     $user->userFirstName = $data['userFirstName'];
     $user->userLastName = $data['userLastName'];
-    $user->userRating = $data['userRating'];
-    $user->userBio = $data['userBio'];
-    $user->userBioLong = $data['userBioLong'];
-    $user->userImage = $data['userImage'];
+    if (!empty($data['userRating'])) {
+          $user->userRating = $data['userRating'];
+    }
+    if (!empty($data['userBio'])) {
+      $user->userBio = $data['userBio'];
+    }
+    if (!empty($data['userBioLong'])) {
+      $user->userBioLong = $data['userBioLong'];
+    }
+    if (!empty($data['userImage'])) {
+      $user->userImage = $data['userImage'];
+    }
 
     // create the user
     if($stmt = $user->create()){
