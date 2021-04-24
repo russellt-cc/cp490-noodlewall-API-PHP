@@ -61,7 +61,6 @@ if(
         http_response_code(201);
         
         // return the newly created event
-        //echo json_encode($stmt->fetch(PDO::FETCH_ASSOC));
         echo json_encode(array("message" => "Event was created.", "noodleID" => $ID));
 
     }

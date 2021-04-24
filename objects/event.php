@@ -27,8 +27,6 @@ class Event
     public $noodleTicketsSold;
     public $noodleCutoff;
 
-
-
     // constructor with $db as database connection
     public function __construct($db)
     {
@@ -54,30 +52,6 @@ class Event
     // create event
     function create()
     {
-
-        // // query to insert record
-        // $query = "INSERT INTO
-        //         " . $this->table_name . "
-        //     SET
-        //     noodleID= :noodleID, 
-        //     noodleTitle= :noodleTitle,
-        //     userID= :userID,
-        //     noodleStatus= :noodleStatus,
-        //     noodleDescription= :noodleDescription,
-        //     noodleSummary= :noodleSummary,
-        //     noodleTags= :noodleTags,
-        //     noodleCoverImage= :noodleCoverImage,
-        //     noodleImages= :noodleImages,
-        //     noodleImageText= :noodleImageText,
-        //     noodleLocation= :noodleLocation,
-        //     noodleDirections= :noodleDirections,
-        //     noodleDate= :noodleDate,
-        //     noodleTime= :noodleTime,
-        //     noodlePrice= :noodlePrice,
-        //     noodleMinTickets= :noodleMinTickets,
-        //     noodleMaxTickets= :noodleMaxTickets,
-        //     noodleTicketsSold= :noodleTicketsSold,
-        //     noodleCutoff= :noodleCutoff;";
 
         // query to insert record
         $query = "INSERT INTO
@@ -106,7 +80,6 @@ class Event
         $stmt = $this->conn->prepare($query);
 
         // sanitize
-        //$this->noodleID = htmlspecialchars(strip_tags($this->noodleID));
         $this->noodleTitle = htmlspecialchars(strip_tags($this->noodleTitle));
         $this->userID = htmlspecialchars(strip_tags($this->userID));
         $this->noodleStatus = htmlspecialchars(strip_tags($this->noodleStatus));
@@ -120,14 +93,13 @@ class Event
         $this->noodleDirections = htmlspecialchars(strip_tags($this->noodleDirections));
         $this->noodleDate = htmlspecialchars(strip_tags($this->noodleDate));
         $this->noodleTime = htmlspecialchars(strip_tags($this->noodleTime));
-        //$this->noodlePrice = htmlspecialchars(strip_tags($this->noodlePrice));
-        //$this->noodleMinTickets = htmlspecialchars(strip_tags($this->noodleMinTickets));
-        //$this->noodleMaxTickets = htmlspecialchars(strip_tags($this->noodleMaxTickets));
-        //$this->noodleTicketsSold = htmlspecialchars(strip_tags($this->noodleTicketsSold));
+        $this->noodlePrice = htmlspecialchars(strip_tags($this->noodlePrice));
+        $this->noodleMinTickets = htmlspecialchars(strip_tags($this->noodleMinTickets));
+        $this->noodleMaxTickets = htmlspecialchars(strip_tags($this->noodleMaxTickets));
+        $this->noodleTicketsSold = htmlspecialchars(strip_tags($this->noodleTicketsSold));
         $this->noodleCutoff = htmlspecialchars(strip_tags($this->noodleCutoff));
 
         // bind values
-        //$stmt->bindParam(":noodleID", $this->noodleID);
         $stmt->bindParam(":noodleTitle", $this->noodleTitle);
         $stmt->bindParam(":userID", $this->userID);
         $stmt->bindParam(":noodleStatus", $this->noodleStatus);
@@ -149,18 +121,6 @@ class Event
 
         // execute query
         if ($stmt->execute()) {
-
-            // // selecting the last created row to return
-            // $query1 = "SELECT * FROM events ORDER BY noodleID DESC LIMIT 0, 1";
-
-            // // prepare query statement
-            // $stmt1 = $this->conn->prepare($query1);
-
-            // // execute query
-            // if ($stmt1->execute()) {
-            //     //returning the last row's event data
-            //     return $stmt1;
-            // }
 
             // Return the insert id
             return $this->conn->lastInsertId();
@@ -218,10 +178,10 @@ class Event
         $this->noodleDirections = htmlspecialchars(strip_tags($this->noodleDirections));
         $this->noodleDate = htmlspecialchars(strip_tags($this->noodleDate));
         $this->noodleTime = htmlspecialchars(strip_tags($this->noodleTime));
-        //$this->noodlePrice = htmlspecialchars(strip_tags($this->noodlePrice));
-        //$this->noodleMinTickets = htmlspecialchars(strip_tags($this->noodleMinTickets));
-        //$this->noodleMaxTickets = htmlspecialchars(strip_tags($this->noodleMaxTickets));
-        //$this->noodleTicketsSold = htmlspecialchars(strip_tags($this->noodleTicketsSold));
+        $this->noodlePrice = htmlspecialchars(strip_tags($this->noodlePrice));
+        $this->noodleMinTickets = htmlspecialchars(strip_tags($this->noodleMinTickets));
+        $this->noodleMaxTickets = htmlspecialchars(strip_tags($this->noodleMaxTickets));
+        $this->noodleTicketsSold = htmlspecialchars(strip_tags($this->noodleTicketsSold));
         $this->noodleCutoff = htmlspecialchars(strip_tags($this->noodleCutoff));
 
         // bind values

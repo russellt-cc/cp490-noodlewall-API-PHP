@@ -16,14 +16,13 @@ class User
     public $userBioLong;
     public $userImage;
 
-
     // constructor with $db as database connection
     public function __construct($db)
     {
         $this->conn = $db;
     }
 
-    // read events
+    // read users
     function read()
     {
 
@@ -39,22 +38,9 @@ class User
         return $stmt;
     }
 
-    // create event
+    // create user
     function create()
     {
-
-        // query to insert record
-        // $query = "INSERT INTO
-        //         " . $this->table_name . "
-        //     SET
-        //     userID= :userID, 
-        //     userName= :userName,
-        //     userFirstName= :userFirstName,
-        //     userLastName= :userLastName,
-        //     userRating= :userRating,
-        //     userBio= :userBio,
-        //     userBioLong= :userBioLong,
-        //     userImage= :userImage;";
 
         $query = "INSERT INTO
             " . $this->table_name . "
@@ -71,7 +57,6 @@ class User
         $stmt = $this->conn->prepare($query);
 
         // sanitize
-        //$this->userID = htmlspecialchars(strip_tags($this->userID));
         $this->userName = htmlspecialchars(strip_tags($this->userName));
         $this->userFirstName = htmlspecialchars(strip_tags($this->userFirstName));
         $this->userLastName = htmlspecialchars(strip_tags($this->userLastName));
@@ -81,7 +66,6 @@ class User
         $this->userImage = htmlspecialchars(strip_tags($this->userImage));
 
         // bind values
-        //$stmt->bindParam(":userID", $this->userID);
         $stmt->bindParam(":userName", $this->userName);
         $stmt->bindParam(":userFirstName", $this->userFirstName);
         $stmt->bindParam(":userLastName", $this->userLastName);
@@ -93,18 +77,6 @@ class User
         // execute query
         if ($stmt->execute()) {
 
-            // selecting the last created row to return
-            //$query1 = "SELECT * FROM users ORDER BY userID DESC LIMIT 0, 1";
-
-            // prepare query statement
-            //$stmt1 = $this->conn->prepare($query1);
-
-            // execute query
-            //if ($stmt1->execute()) {
-                //returning the last row's user data
-                //return $stmt1;
-            //}
-
               // Return the insert id
               return $this->conn->lastInsertId();
 
@@ -114,7 +86,7 @@ class User
     }
 
 
-    // update the event
+    // update the user
     function update()
     {
 
@@ -164,7 +136,7 @@ class User
         return false;
     }
 
-    // delete the event
+    // delete the user
     function delete()
     {
 
@@ -188,7 +160,7 @@ class User
         return false;
     }
 
-    // search events
+    // search users
     function search($keywords)
     {
 

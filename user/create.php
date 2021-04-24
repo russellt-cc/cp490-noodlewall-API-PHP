@@ -30,42 +30,23 @@ if(
 ){
   
     // set user property values
-    //$user->userID = $data['userID'];
     $user->userName = $data['userName'];
     $user->userFirstName = $data['userFirstName'];
     $user->userLastName = $data['userLastName'];
-    if (!empty($data['userRating'])) {
-          $user->userRating = $data['userRating'];
-    } else {
-      $user->userRating = 3;
-    }
-    if (!empty($data['userBio'])) {
-      $user->userBio = $data['userBio'];
-    } else {
-      $user->userBio = null;
-    }
-    if (!empty($data['userBioLong'])) {
-      $user->userBioLong = $data['userBioLong'];
-    } else {
-      $user->userBioLong = null;
-    }
-    if (!empty($data['userImage'])) {
-      $user->userImage = $data['userImage'];
-    } else {
-      $user->userImage = null;
-    }
+    $user->userRating = $data['userRating'];
+    $user->userBio = $data['userBio'];
+    $user->userBioLong = $data['userBioLong'];
+    $user->userImage = $data['userImage'];
 
     $ID = $user->create();
 
     // create the user
-    //if($stmt = $user->create()){
       if($ID !== false){
   
         // set response code - 201 created
         http_response_code(201);
   
         // return the newly created user
-        //echo json_encode($stmt->fetch(PDO::FETCH_ASSOC));
         echo json_encode(array("message" => "User was created.", "userID" => $ID));
 
     }
