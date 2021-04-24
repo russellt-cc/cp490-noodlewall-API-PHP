@@ -105,7 +105,7 @@ class User
                 //return $stmt1;
             //}
 
-              return $conn -> insert_id;
+              return true;
 
         }
 
