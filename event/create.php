@@ -78,7 +78,7 @@ if(
         $err = $stmt->errorInfo();
   
         // tell the user
-        echo json_encode(array("message" => "Unable to create event. Database error: " . $err));
+        echo json_encode(array("message" => "Unable to create event.", "error" => $err));
 
     }
 }
