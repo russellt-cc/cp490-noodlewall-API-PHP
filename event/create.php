@@ -52,18 +52,20 @@ if(
     $event->noodleTicketsSold = $data['noodleTicketsSold'];
     $event->noodleCutoff = $data['noodleCutoff'];
 
-
+    // Call the create event function
+    $stmt = $event->create();
 
     // create the event
-    if($stmt = $event->create()){
-
+    //if($stmt = $event->create()){
+    if($stmt -> execute()){
 
         // set response code - 201 created
         http_response_code(201);
         
         // return the newly created event
-        echo json_encode($stmt->fetch(PDO::FETCH_ASSOC));
-       // echo json_encode(array("message" => "Event was created."));
+        //echo json_encode($stmt->fetch(PDO::FETCH_ASSOC));
+        echo json_encode(array("message" => "Event was created."));
+
     }
 
     // if unable to create the event, tell the user
@@ -71,9 +73,13 @@ if(
   
         // set response code - 503 service unavailable
         http_response_code(503);
+
+        // Get error message
+        $err = $stmt->errorInfo();
   
         // tell the user
-        echo json_encode(array("message" => "Unable to create event."));
+        echo json_encode(array("message" => "Unable to create event. Database error: " . $err));
+
     }
 }
 

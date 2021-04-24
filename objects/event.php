@@ -123,24 +123,25 @@ class Event
         $stmt->bindParam(":noodleTicketsSold", $this->noodleTicketsSold);
         $stmt->bindParam(":noodleCutoff", $this->noodleCutoff);
 
+        return $stmt;
 
-        // execute query
-        if ($stmt->execute()) {
+        // // execute query
+        // if ($stmt->execute()) {
 
-            // selecting the last created row to return
-            $query1 = "SELECT * FROM events ORDER BY noodleID DESC LIMIT 0, 1";
+        //     // selecting the last created row to return
+        //     $query1 = "SELECT * FROM events ORDER BY noodleID DESC LIMIT 0, 1";
 
-            // prepare query statement
-            $stmt1 = $this->conn->prepare($query1);
+        //     // prepare query statement
+        //     $stmt1 = $this->conn->prepare($query1);
 
-            // execute query
-            if ($stmt1->execute()) {
-                //returning the last row's event data
-                return $stmt1;
-            }
-        }
+        //     // execute query
+        //     if ($stmt1->execute()) {
+        //         //returning the last row's event data
+        //         return $stmt1;
+        //     }
+        // }
 
-        return false;
+        // return false;
     }
 
     // update the event
