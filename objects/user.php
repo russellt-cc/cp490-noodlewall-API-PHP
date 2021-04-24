@@ -106,7 +106,7 @@ class User
             //}
 
               // Return the insert id
-              return $db -> lastInsertId();
+              return $this->conn->lastInsertId();
 
         }
 
