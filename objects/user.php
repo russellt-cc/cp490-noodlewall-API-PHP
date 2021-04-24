@@ -55,7 +55,7 @@ class User
         //     userBio= :userBio,
         //     userBioLong= :userBioLong,
         //     userImage= :userImage;";
-        
+
         $query = "INSERT INTO
             " . $this->table_name . "
         SET
@@ -94,16 +94,19 @@ class User
         if ($stmt->execute()) {
 
             // selecting the last created row to return
-            $query1 = "SELECT * FROM users ORDER BY userID DESC LIMIT 0, 1";
+            //$query1 = "SELECT * FROM users ORDER BY userID DESC LIMIT 0, 1";
 
             // prepare query statement
-            $stmt1 = $this->conn->prepare($query1);
+            //$stmt1 = $this->conn->prepare($query1);
 
             // execute query
-            if ($stmt1->execute()) {
+            //if ($stmt1->execute()) {
                 //returning the last row's user data
-                return $stmt1;
-            }
+                //return $stmt1;
+            //}
+
+              return $conn -> insert_id;
+
         }
 
         return false;
