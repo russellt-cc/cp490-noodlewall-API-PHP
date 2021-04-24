@@ -55,11 +55,34 @@ class Event
     function create()
     {
 
+        // // query to insert record
+        // $query = "INSERT INTO
+        //         " . $this->table_name . "
+        //     SET
+        //     noodleID= :noodleID, 
+        //     noodleTitle= :noodleTitle,
+        //     userID= :userID,
+        //     noodleStatus= :noodleStatus,
+        //     noodleDescription= :noodleDescription,
+        //     noodleSummary= :noodleSummary,
+        //     noodleTags= :noodleTags,
+        //     noodleCoverImage= :noodleCoverImage,
+        //     noodleImages= :noodleImages,
+        //     noodleImageText= :noodleImageText,
+        //     noodleLocation= :noodleLocation,
+        //     noodleDirections= :noodleDirections,
+        //     noodleDate= :noodleDate,
+        //     noodleTime= :noodleTime,
+        //     noodlePrice= :noodlePrice,
+        //     noodleMinTickets= :noodleMinTickets,
+        //     noodleMaxTickets= :noodleMaxTickets,
+        //     noodleTicketsSold= :noodleTicketsSold,
+        //     noodleCutoff= :noodleCutoff;";
+
         // query to insert record
         $query = "INSERT INTO
                 " . $this->table_name . "
             SET
-            noodleID= :noodleID, 
             noodleTitle= :noodleTitle,
             userID= :userID,
             noodleStatus= :noodleStatus,
@@ -78,11 +101,12 @@ class Event
             noodleMaxTickets= :noodleMaxTickets,
             noodleTicketsSold= :noodleTicketsSold,
             noodleCutoff= :noodleCutoff;";
+
         // prepare query
         $stmt = $this->conn->prepare($query);
 
         // sanitize
-        $this->noodleID = htmlspecialchars(strip_tags($this->noodleID));
+        //$this->noodleID = htmlspecialchars(strip_tags($this->noodleID));
         $this->noodleTitle = htmlspecialchars(strip_tags($this->noodleTitle));
         $this->userID = htmlspecialchars(strip_tags($this->userID));
         $this->noodleStatus = htmlspecialchars(strip_tags($this->noodleStatus));
@@ -103,7 +127,7 @@ class Event
         $this->noodleCutoff = htmlspecialchars(strip_tags($this->noodleCutoff));
 
         // bind values
-        $stmt->bindParam(":noodleID", $this->noodleID);
+        //$stmt->bindParam(":noodleID", $this->noodleID);
         $stmt->bindParam(":noodleTitle", $this->noodleTitle);
         $stmt->bindParam(":userID", $this->userID);
         $stmt->bindParam(":noodleStatus", $this->noodleStatus);
