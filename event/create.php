@@ -61,10 +61,13 @@ if(
 
         // set response code - 201 created
         http_response_code(201);
+
+        // get the insert id
+        $id = $stmt->lastInsertId();
         
         // return the newly created event
         //echo json_encode($stmt->fetch(PDO::FETCH_ASSOC));
-        echo json_encode(array("message" => "Event was created."));
+        echo json_encode(array("message" => "Event was created.", "noodleID" => $id));
 
     }
 
