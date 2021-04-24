@@ -46,7 +46,15 @@ if(
     $event->noodleDirections = $data['noodleDirections'];
     $event->noodleDate = $data['noodleDate'];
     $event->noodleTime = $data['noodleTime'];
-    $event->noodlePrice = $data['noodlePrice'];
+
+
+    if (!empty($data['noodlePrice'])) {
+      $event->noodlePrice = $data['noodlePrice'];
+    } else {
+      $event->noodlePrice = null;
+    }
+
+
     $event->noodleMinTickets = $data['noodleMinTickets'];
     $event->noodleMaxTickets = $data['noodleMaxTickets'];
     $event->noodleTicketsSold = $data['noodleTicketsSold'];
