@@ -20,7 +20,7 @@ $file = $_FILES['image'];
 $temp = $file['tmp_name'];
 
 //set the image upload path
-$localPath = 'images/userIcons/' . uniqid() . '.png';
+$localPath = 'images/userIcons/uploads/' . uniqid() . '.png';
 $path = '../' . $localPath;
 
 //upload image
