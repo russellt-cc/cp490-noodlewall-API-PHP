@@ -6,7 +6,7 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-$pathToImages = "../images/userIcons/";
+$pathToImages = "../images/userIcons/uploads/";
 
 // get image full address
 $json = file_get_contents("php://input");
