@@ -32,7 +32,6 @@ if(
 ){
 
     // set event property values
-    //$event->noodleID = $data['noodleID'];
     $event->noodleTitle = $data['noodleTitle'];
     $event->userID = $data['userID'];
     $event->noodleStatus = $data['noodleStatus'];
